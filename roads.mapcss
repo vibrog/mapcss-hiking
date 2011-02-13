@@ -5,17 +5,6 @@ way[highway] {
   color:#FEC0CA;
 }
 
-/* Areas */
-way:closed[amenity=parking],
-way:closed[highway=turning_circle],
-way:closed[highway][area=yes]
-{
-  width:1;
-  color:white;
-  fill-color:white;
-  fill-opacity:0.4;
-}
-
 /* Major roads */
 way[highway=motorway],
 way[highway=trunk],
@@ -69,13 +58,26 @@ way[highway=bridleway]
   dashes:25,5;
 }
 way[highway=footway],
-way[highway=steps],
 way[highway=pedestrian],
+way[highway=steps],
 way[highway=path]
 {
   width:1;
   color:white;
   dashes:8,4;
+}
+
+/* Areas */
+way[amenity=parking]:area,
+way[highway][area=yes]:area,
+way[highway=turning_circle]:area
+{
+  width:1;
+  color:white;
+  dashes:0;
+  casing-width:0;
+  fill-color:white;
+  fill-opacity:0.4;
 }
 
 /* Railways */
@@ -98,7 +100,9 @@ way[tunnel=yes]
   opacity:0.4;
   z-index:1;
 }
-way[bridge=yes]
+way[bridge=yes],
+way[bridge=viaduct],
+way[bridge=suspension]
 {
   casing-width:+3;
   casing-color:white;
