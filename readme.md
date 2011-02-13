@@ -54,12 +54,12 @@ that are now freely available and used with permission.
   <http://www.statkart.no/filestore/Standardisering/docs/symbol.pdf>
 
 
-## Usage
+## Installation and usage
 
 [JOSM][2] settings:
-I'm using these style sheets with a dark canvas
+I'm using these style sheets with a dark canvas, e.g.
 `color.background=#222222` (87% gray) and
-`mappaint.fillalpha=40`
+`mappaint.fillalpha=40`,
 which is equivalent to the following [MapCSS][1]:
 
     canvas { background-color:#222; }
