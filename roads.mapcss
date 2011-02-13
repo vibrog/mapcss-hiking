@@ -1,0 +1,106 @@
+/* Default */
+way[highway] {
+  z-index:2;
+  width:2.2;
+  color:#FEC0CA;
+}
+
+/* Areas */
+way:closed[amenity=parking],
+way:closed[highway=turning_circle],
+way:closed[highway][area=yes]
+{
+  width:1;
+  color:white;
+  fill-color:white;
+  fill-opacity:0.4;
+}
+
+/* Major roads */
+way[highway=motorway],
+way[highway=trunk],
+way[highway=primary],
+way[highway=secondary]
+{
+  casing-width:7.2;
+  casing-color:white;
+  width:5.2;
+  color:#7D7D7D;
+}
+way[highway=~/_link/]
+{
+  casing-width:5;
+  casing-color:white;
+  width:3;
+  color:#7D7D7D;
+}
+
+/* Minor roads */
+way[highway=tertiary],
+way[highway=minor]
+{
+  casing-width:6.5;
+  casing-color:white;
+  width:4.5;
+  color:#7D7D7D;
+}
+
+/* Residential roads */
+way[highway=residential],
+way[highway=unclassified]
+{
+  width:3;
+  color:white;
+}
+way[highway=service],
+way[highway=living_street]
+{
+  width:1.8;
+  color:white;
+}
+
+/* Non-motorized roads */
+way[highway=cycleway],
+way[highway=track],
+way[highway=bridleway]
+{
+  width:1.5;
+  color:white;
+  dashes:25,5;
+}
+way[highway=footway],
+way[highway=steps],
+way[highway=pedestrian],
+way[highway=path]
+{
+  width:1;
+  color:white;
+  dashes:8,4;
+}
+
+/* Railways */
+way[railway=rail],
+way[railway=subway],
+way[railway=light_rail],
+way[railway=narrow_gauge],
+way[railway=tram]
+{
+  casing-width:3;
+  casing-color:#DDD;
+  width:2;
+  color:#444;
+  dashes:8,5;
+}
+
+way[tunnel=yes]
+{
+  casing-width:0;
+  opacity:0.4;
+  z-index:1;
+}
+way[bridge=yes]
+{
+  casing-width:+3;
+  casing-color:white;
+  z-index:4;
+}
