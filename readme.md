@@ -50,8 +50,8 @@ that are now freely available and used with permission.
 
   *Symbolfonter for friluftsliv og sport
   [en:Symbol fonts for recreation and sport]* (1997).
-  Statens kartverk Landkartdivisjonen. ISBN 82-90408-52-8,
-  retrieved from http://www.statkart.no/filestore/Standardisering/docs/symbol.pdf
+  Statens kartverk Landkartdivisjonen, ISBN 82-90408-52-8, retrieved from
+  <http://www.statkart.no/filestore/Standardisering/docs/symbol.pdf>
 
 
 ## Usage
@@ -59,14 +59,13 @@ that are now freely available and used with permission.
 [JOSM][2] settings:
 I'm using these style sheets with a dark canvas
 `color.background=#222222` (87% gray) and
-`mappaint.fillalpha=40`.
-
-Which is equivalent to the following [MapCSS][1]:
+`mappaint.fillalpha=40`
+which is equivalent to the following [MapCSS][1]:
 
     canvas { background-color:#222; }
-    way:area { opacity:0.4; }
+    way:area { fill-opacity:0.4; }
 
-Open **Preferences** and add the wanted modules to
+Open **Preferences** and add the wanted modules to your
 **Map Paint Styles** list. Remember that order is relevant,
 so loading style sheets in this order will give an intended result:
 
