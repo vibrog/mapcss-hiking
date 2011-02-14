@@ -45,6 +45,10 @@ Symbols are taken from the
 the [Norwegian Mapping Authority](http://www.statkart.no/)
 that are now freely available and used with permission.
 
+Buildings are drawn differently according to a scheme used in
+[Specification for cartography on displays][4] to keep commercial
+and residential buildings apart.
+
 
 ## Installation and usage
 
@@ -78,3 +82,5 @@ The above [MapCSS][] rules are not yet supported by [JOSM][].
 [JOSM]: http://josm.openstreetmap.de/
 [3]: http://www.statkart.no/filestore/Standardisering/docs/symbol.pdf
   "Symbolfonter for friluftsliv og sport (1997). Statens kartverk Landkartdivisjonen, ISBN 82-90408-52-8"
+[4]: http://www.statkart.no/Skjermkartografi.d25-SwJjM0n.ips
+  "Spesifikasjon for skjermkartografi"
