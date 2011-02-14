@@ -1,0 +1,34 @@
+way["piste:type"=nordic],
+way[route=ski],
+way["piste:grooming"]
+{
+  color:#F90025;
+  width:3;
+  dashes:0;
+  z-index:6;
+}
+
+way["piste:grooming"=classic],
+way["piste:grooming"=skating],
+way["piste:grooming"=classic+skating]
+{
+  width:5;
+}
+way["piste:grooming"=scooter]
+{
+  dashes:20,5;
+}
+way["piste:grooming"=backcountry]
+{
+  dashes:10,8;
+}
+
+way["piste:type"=nordic][lit=yes]::nightski,
+way["piste:lit"=yes]::nightski
+{
+  color:#F90025;
+  width:9;
+  dashes:1,27;
+  linecap:round;
+  z-index:6;
+}

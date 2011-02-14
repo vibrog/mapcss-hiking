@@ -66,6 +66,12 @@ so loading style sheets in this order will give an intended result:
     @import("trailvisibility.mapcss");
     @import("hiking-routes.mapcss");
 
+For winter activities:
+
+    @import("landscape-winter.mapcss");
+    @import("ski-nordic.mapcss");
+    @import("ski-alpine.mapcss");
+
 The above [MapCSS][] rules are not yet supported by [JOSM][].
 
 [MapCSS]: http://wiki.openstreetmap.org/wiki/MapCSS
