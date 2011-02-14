@@ -1,10 +1,11 @@
 
 # MapCSS for OSM hiking maps
 
-A set of [MapCSS][1] style sheets that implements conventions often
+A set of [MapCSS][] style sheets that implements conventions often
 seen in Norwegian hiking and nordic skiing maps.
 
-## Tags
+
+## Noteworthy map features
 
 The summer map is a hiking map and includes support for these tags:
 
@@ -31,11 +32,6 @@ For example
 
 The style sheets are modular, making reuse and customization easier.
 
-It can be forked from the
-[GitHub repository](http://github.com/vibrog/mapcss-hiking).
-
-Maintained by Vidar Bronken Gundersen
-
 
 ## Cartography and symbols
 
@@ -44,23 +40,19 @@ by [Asker Skiklubb](http://asker-skiklubb.no/), which are essentially
 orienteering maps that have been cleaned up visually, and added POIs,
 place names and highlighting marked hiking trails and skiing tracks.
 
-Symbols are taken from a standard created by the
-[Norwegian Mapping Authority](http://www.statkart.no/)
+Symbols are taken from the
+[Symbol fonts for recreation and sport][3] standard created by
+the [Norwegian Mapping Authority](http://www.statkart.no/)
 that are now freely available and used with permission.
-
-  *Symbolfonter for friluftsliv og sport
-  [en:Symbol fonts for recreation and sport]* (1997).
-  Statens kartverk Landkartdivisjonen, ISBN 82-90408-52-8, retrieved from
-  <http://www.statkart.no/filestore/Standardisering/docs/symbol.pdf>
 
 
 ## Installation and usage
 
-[JOSM][2] settings:
+[JOSM][] settings:
 I'm using these style sheets with a dark canvas, e.g.
 `color.background=#222222` (87% gray) and
 `mappaint.fillalpha=40`,
-which is equivalent to the following [MapCSS][1]:
+which is equivalent to the following [MapCSS][]:
 
     canvas { background-color:#222; }
     way:area { fill-opacity:0.4; }
@@ -74,8 +66,9 @@ so loading style sheets in this order will give an intended result:
     @import("trailvisibility.mapcss");
     @import("hiking-routes.mapcss");
 
-The `@import`-rule is not yet supported by [JOSM][2].
+The above [MapCSS][] rules are not yet supported by [JOSM][].
 
-
-[1]: http://wiki.openstreetmap.org/wiki/MapCSS
-[2]: http://josm.openstreetmap.de/
+[MapCSS]: http://wiki.openstreetmap.org/wiki/MapCSS
+[JOSM]: http://josm.openstreetmap.de/
+[3]: http://www.statkart.no/filestore/Standardisering/docs/symbol.pdf
+  "Symbolfonter for friluftsliv og sport (1997). Statens kartverk Landkartdivisjonen, ISBN 82-90408-52-8"
