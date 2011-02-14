@@ -11,14 +11,14 @@ way[highway=trunk],
 way[highway=primary],
 way[highway=secondary]
 {
-  casing-width:7.2;
+  casing-width:+2;
   casing-color:white;
   width:5.2;
   color:#7D7D7D;
 }
 way[highway=~/_link/]
 {
-  casing-width:5;
+  casing-width:+2;
   casing-color:white;
   width:3;
   color:#7D7D7D;
@@ -28,7 +28,7 @@ way[highway=~/_link/]
 way[highway=tertiary],
 way[highway=minor]
 {
-  casing-width:6.5;
+  casing-width:+2;
   casing-color:white;
   width:4.5;
   color:#7D7D7D;
@@ -87,7 +87,7 @@ way[railway=light_rail],
 way[railway=narrow_gauge],
 way[railway=tram]
 {
-  casing-width:3;
+  casing-width:+1;
   casing-color:#DDD;
   width:2;
   color:#444;
@@ -104,7 +104,7 @@ way[bridge=yes],
 way[bridge=viaduct],
 way[bridge=suspension]
 {
-  casing-width:+3;
+  casing-width:+4;
   casing-color:white;
   z-index:4;
 }
