@@ -1,5 +1,5 @@
 /* Default */
-way:closed
+area
 {
   width:1;
   fill-opacity:0.4;
@@ -8,65 +8,65 @@ way:closed
   z-index:1;
 }
 
-way:closed[natural=wood],
-way:closed[landuse=forest]
+area[natural=wood],
+area[landuse=forest]
 {
   fill-color:#AED0A0;
 }
 
-way:closed[landuse=farm],
-way:closed[landuse=farmland],
-way:closed[landuse=orchard]
+area[landuse=farm],
+area[landuse=farmland],
+area[landuse=orchard]
 {
   fill-color:#FFC675;
 }
 
-way:closed[landuse=meadow],
-way:closed[natural=scrub],
-way:closed[landuse=field],
-way:closed[landuse=grass],
-way:closed[landuse=conservation],
-way:closed[natural=heath],
-way:closed[natural=fell]
+area[landuse=meadow],
+area[natural=scrub],
+area[landuse=field],
+area[landuse=grass],
+area[landuse=conservation],
+area[natural=heath],
+area[natural=fell]
 {
   fill-color:#FFDE9B;
 }
 
-way:closed[landuse=recreation_ground],
-way:closed[landuse=village_green],
-way:closed[landuse=cemetery],
-way:closed[leisure=park],
-way:closed[leisure=pitch],
-way:closed[leisure=track],
-way:closed[leisure=playground],
-way:closed[leisure=golf_course]
+area[landuse=recreation_ground],
+area[landuse=village_green],
+area[landuse=cemetery],
+area[leisure=park],
+area[leisure=pitch],
+area[leisure=track],
+area[leisure=playground],
+area[leisure=golf_course]
 {
   fill-color:#9bb93c;
 }
 
-way:closed[landuse=residential],
-way:closed[landuse=retail],
-way:closed[landuse=allotments]
+area[landuse=residential],
+area[landuse=retail],
+area[landuse=allotments]
 {
   fill-color:#666;
 }
 
-way:closed[landuse=industrial],
-way:closed[landuse=commercial],
-way:closed[landuse=military],
-way:closed[power=station],
-way:closed[power=sub_station],
-way:closed[landuse=port],
-way:closed[landuse=landfill],
-way:closed[landuse=quarry]
+area[landuse=industrial],
+area[landuse=commercial],
+area[landuse=military],
+area[power=station],
+area[power=sub_station],
+area[landuse=port],
+area[landuse=landfill],
+area[landuse=quarry]
 {
   fill-color:#666;
 }
 
-way:closed[natural=water],
-way:closed[natural=pond],
-way:closed[landuse=basin],
-way:closed[landuse=reservoir]
+area[natural=water],
+area[natural=pond],
+area[landuse=basin],
+area[landuse=reservoir]
 {
   fill-color:#87D2E7;
 }
@@ -98,29 +98,9 @@ way[waterway=drain]
   width:1;
 }
 
-way:closed[natural=wetland],
-way:closed[natural=marsh]
+area[natural=wetland],
+area[natural=marsh]
 {
-}
-
-way:closed[building],
-way:closed[military=barracks]
-{
-  fill-color:black;
-  z-index:2;
-}
-way:closed[building][amenity],
-way:closed[building][shop],
-way:closed[building][office],
-way:closed[building][craft],
-way:closed[man_made=works],
-way:closed[leisure=sports_centre],
-way:closed[leisure=stadium],
-way:closed[military=bunker],
-way:closed[aeroway=terminal],
-way:closed[railway=station]
-{
-  fill-color:#5a87de;
 }
 
 way[leisure=nature_reserve],

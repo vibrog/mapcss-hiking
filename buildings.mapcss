@@ -1,0 +1,19 @@
+area[building],
+area[military=barracks]
+{
+  fill-color:black;
+  z-index:2;
+}
+area[building][amenity],
+area[building][shop],
+area[building][office],
+area[building][craft],
+area[man_made=works],
+area[leisure=sports_centre],
+area[leisure=stadium],
+area[military=bunker],
+area[aeroway=terminal],
+area[railway=station]
+{
+  fill-color:#5a87de;
+}

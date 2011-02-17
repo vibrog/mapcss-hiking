@@ -23,8 +23,8 @@ way[piste:grooming=backcountry]
   dashes:10,8;
 }
 
-way[piste:type=nordic][lit=yes]::nightski,
-way[piste:lit=yes]::nightski
+way[piste:type=nordic][lit?]::nightski,
+way[piste:lit?]::nightski
 {
   color:#F90025;
   width:9;

@@ -68,9 +68,9 @@ way[highway=path]
 }
 
 /* Areas */
-way[amenity=parking]:area,
-way[highway][area=yes]:area,
-way[highway=turning_circle]:area
+area[amenity=parking],
+area[highway][area?],
+area[highway=turning_circle]
 {
   width:1;
   color:white;
@@ -94,13 +94,13 @@ way[railway=tram]
   dashes:8,5;
 }
 
-way[tunnel=yes]
+way[tunnel?]
 {
   casing-width:0;
   opacity:0.4;
   z-index:1;
 }
-way[bridge=yes],
+way[bridge?],
 way[bridge=viaduct],
 way[bridge=suspension]
 {
