@@ -10,7 +10,7 @@ way[piste:grooming]
 
 way[piste:grooming=classic],
 way[piste:grooming=skating],
-way[piste:grooming=classic+skating]
+way[piste:grooming="classic+skating"]
 {
   width:5;
 }
