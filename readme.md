@@ -59,7 +59,7 @@ I'm using these style sheets with a dark canvas, e.g.
 which is equivalent to the following [MapCSS][]:
 
     canvas { background-color:#222; }
-    way:area { fill-opacity:0.4; }
+    area { fill-opacity:0.4; }
 
 Open **Preferences** and add the wanted modules to your
 **Map Paint Styles** list. Remember that order is relevant,
@@ -78,9 +78,13 @@ For winter activities:
 
 The above [MapCSS][] rules are not yet supported by [JOSM][].
 
+More: [Details on JOSM's MapCSS implementation][5].
+
+
 [MapCSS]: http://wiki.openstreetmap.org/wiki/MapCSS
 [JOSM]: http://josm.openstreetmap.de/
 [3]: http://www.statkart.no/filestore/Standardisering/docs/symbol.pdf
   "Symbolfonter for friluftsliv og sport (1997). Statens kartverk Landkartdivisjonen, ISBN 82-90408-52-8"
 [4]: http://www.statkart.no/Skjermkartografi.d25-SwJjM0n.ips
   "Spesifikasjon for skjermkartografi"
+[5]: http://josm.openstreetmap.de/wiki/Help/MapStyles/MapCSSImplementation
