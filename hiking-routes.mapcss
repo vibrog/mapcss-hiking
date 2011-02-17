@@ -1,0 +1,19 @@
+
+relation[route=hiking] > way::trailblazed,
+relation[route=foot] > way::trailblazed,
+way[trailblazed?]::trailblazed,
+way[marked_trail]::trailblazed,
+way[route=foot]::trailblazed
+{
+  color:#D0006F;
+  width:7;
+  dashes:1,14;
+  linecap:round;
+  z-index:5;
+}
+
+way[trailblazed?]::trailblazed,
+way[marked_trail=blue]::trailblazed
+{
+  color:#0E3CCC;
+}
