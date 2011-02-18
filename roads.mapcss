@@ -1,3 +1,5 @@
+meta { title:"Roads"; }
+
 /* Default */
 way[highway] {
   z-index:2;
@@ -106,5 +108,5 @@ way[bridge=suspension]
 {
   casing-width:+4;
   casing-color:white;
-  z-index:4;
+  z-index:3;
 }

@@ -1,6 +1,4 @@
-meta {
-  title: "Survey annotations";
-}
+meta { title: "Survey annotations"; }
 way|z16-[fixme],
 way|z16-[note=~/fixme|FIXME/],
 way|z16-[note=~/todo|TODO/],

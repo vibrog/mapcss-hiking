@@ -52,17 +52,21 @@ and residential buildings apart.
 
 ## Installation and usage
 
-[JOSM][] settings:
-I'm using these style sheets with a dark canvas, e.g.
-`color.background=#222222` (87% gray) and
-`mappaint.fillalpha=40`,
+Open [JOSM][] **Preferences** and add the wanted modules to your
+**Map Paint Styles** list. To do this simply paste the URL to the raw view, e.g.
+<https://github.com/vibrog/mapcss-hiking/raw/master/roads.mapcss>
+
+These style sheets are intended used with a dark canvas, e.g.
+`color.background=#222222` (87% gray)
 which is equivalent to the following [MapCSS][]:
 
     canvas { background-color:#222; }
+
+Area object opacity overrides `mappaint.fillalpha`:
+
     area { fill-opacity:0.4; }
 
-Open **Preferences** and add the wanted modules to your
-**Map Paint Styles** list. Remember that order is relevant,
+Remember that order is relevant,
 so loading style sheets in this order will give an intended result:
 
     @import("landscape.mapcss");
@@ -77,8 +81,7 @@ For winter activities:
     @import("ski-nordic.mapcss");
     @import("ski-alpine.mapcss");
 
-The above [MapCSS][] rules are not yet supported by [JOSM][].
-
+The `@import`rule are not yet supported by [JOSM][].  
 More: [Details on JOSM's MapCSS implementation][5].
 
 

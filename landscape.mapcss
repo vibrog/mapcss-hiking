@@ -1,11 +1,11 @@
+meta { title:"Landscape"; }
+
 /* Default */
-area
-{
-  width:1;
+area {
   fill-opacity:0.4;
+  width:1;
   text:name;
   text-position:center;
-  z-index:1;
 }
 
 area[natural=wood],
