@@ -67,6 +67,7 @@ so loading style sheets in this order will give an intended result:
 
     @import("landscape.mapcss");
     @import("roads.mapcss");
+    @import("buildings.mapcss");
     @import("trailvisibility.mapcss");
     @import("hiking-routes.mapcss");
 

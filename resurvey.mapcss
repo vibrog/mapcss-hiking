@@ -1,0 +1,15 @@
+meta {
+  title: "Survey annotations";
+}
+way|z16-[fixme],
+way|z16-[note=~/fixme|FIXME/],
+way|z16-[note=~/todo|TODO/],
+way|z16-[highway=road] {
+  color:#F0A;
+}
+node|z16-[fixme],
+node|z16-[noexit=no] {
+  symbol-shape:circle;
+  symbol-fill-color:#F0A;
+  symbol-size:10;
+}
