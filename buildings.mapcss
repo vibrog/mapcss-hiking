@@ -1,3 +1,5 @@
+meta { title:"Buildings"; }
+
 area[building],
 area[military=barracks]
 {
