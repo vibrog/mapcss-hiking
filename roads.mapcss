@@ -61,17 +61,23 @@ way[highway=bridleway]
 }
 way[highway=footway],
 way[highway=pedestrian],
-way[highway=steps],
 way[highway=path]
 {
   width:1;
   color:white;
   dashes:8,4;
 }
+way[highway=steps]
+{
+  width:6;
+  color:white;
+  dashes:2;
+}
 
 /* Areas */
 area[amenity=parking],
 area[highway][area?],
+area[railway=platform],
 area[highway=turning_circle]
 {
   width:1;
@@ -87,7 +93,10 @@ way[railway=rail],
 way[railway=subway],
 way[railway=light_rail],
 way[railway=narrow_gauge],
-way[railway=tram]
+way[railway=preserved],
+way[railway=monorail],
+way[railway=funicular],
+way[railway=tram][!highway]
 {
   casing-width:+1;
   casing-color:#DDD;

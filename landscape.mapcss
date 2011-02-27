@@ -17,7 +17,7 @@ area[natural=scrub],
 area[natural=heath],
 area[landuse=orchard]
 {
-  fill-color:#B5E2B5;
+  fill-color:#dfd;
 }
 
 area[landuse=farm],
