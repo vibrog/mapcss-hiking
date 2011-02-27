@@ -1,0 +1,87 @@
+meta { title:"Transportation"; }
+
+node|z15-[railway=station]::transportation,
+node|z15-[railway=halt]::transportation,
+node|z15-[railway=tram_stop]::transportation,
+node|z15-[highway=bus_stop]::transportation,
+node|z15-[amenity=bus_station]::transportation,
+node|z15-[amenity=ferry_terminal]::transportation {
+  symbol-shape:circle;
+  symbol-fill-color:#FF6;
+  symbol-fill-opacity:0.5;
+  symbol-size:35;
+  z-index:4;
+}
+
+node[railway=station],
+node[railway=halt],
+node[railway=tram_stop],
+node[railway=stop],
+node[railway=subway_entrance],
+node[highway=bus_stop],
+node[amenity=bus_station],
+node[amenity=ferry_terminal] {
+  text:name;
+  z-index:5;
+}
+
+node[railway=stop] {
+  symbol-shape:circle;
+  symbol-fill-color:#d72e45;
+  symbol-stroke-color:white;
+  symbol-size:11;
+}
+node[railway=station],
+node[railway=halt] {
+  icon-image: symbols/railwaystation.png;
+}
+node[railway=subway_entrance],
+way[railway=subway] > node[railway=station],
+way[railway=subway] > node[railway=halt] {
+  icon-image: symbols/subway.png;
+}
+node[railway=tram_stop],
+way[railway=light_rail] > node[railway=station],
+way[railway=light_rail] > node[railway=halt] {
+  icon-image: symbols/tram.png;
+}
+node[highway=bus_stop],
+node[amenity=bus_station] {
+  icon-image: symbols/bus.png;
+}
+node[amenity=ferry_terminal] {
+  icon-image: symbols/ferry.png;
+}
+
+relation[route=train] > way::transportation,
+relation[route=subway] > way::transportation,
+relation[route=tram] > way::transportation,
+relation[route=bus] > way::transportation {
+  width:8;
+  opacity:0.8;
+  z-index:5;
+  text:ref;
+}
+
+relation[route=train] > way::transportation {
+  color:#FAAA2D;
+}
+relation[route=subway] > way::transportation {
+  color:#060688;
+}
+relation[route=tram] > way::transportation {
+  color:#0606FA;
+}
+
+relation[route=bus] > way::transportation {
+  color:#f72b2b;
+}
+
+relation[route=ferry] > way,
+way[route=ferry] {
+  color:#a0cae9;
+  dashes:16,8;
+  width:3;
+  opacity:0.6;
+  z-index:5;
+}
