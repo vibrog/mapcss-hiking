@@ -1,0 +1,92 @@
+meta { title:"Biking"; }
+
+/* Commuter biking */
+way[highway=cycleway]::bike,
+way[highway=footway][bicycle?]::bike,
+way[cycleway]::bike,
+way[cycleway:left]::bike,
+way[cycleway:right]::bike {
+  color:#C02F24;
+  width:5;
+  opacity:0.6;
+  z-index:6;
+}
+
+/* Bicycle routes */
+relation[route=bicycle] > way[highway]::bike,
+way[ncn]::bike, way[rcn]::bike, way[lcn]::bike,
+way[ncn_ref]::bike, way[rcn_ref]::bike, way[lcn_ref]::bike {
+  color:#C02F24;
+  width:10;
+  opacity:0.6;
+  z-index:6;
+}
+
+/* Carriage trails */
+way[highway=cycleway][surface=gravel]::bike,
+way[highway=track][!tracktype]::bike,
+way[highway=track][tracktype=grade1]::bike,
+way[highway=track][tracktype=grade2]::bike {
+  color:#C02F24;
+  dashes:16,5;
+  width:5;
+  opacity:0.6;
+  z-index:6;
+}
+
+/* Cross country biking */
+way[mtb:type=crosscountry]::bike,
+way[mtb:scale]::bike,
+relation[route=bicycle][network=mtb] > way[highway]::bike,
+relation[route=mtb] > way[highway]::bike {
+  color:#93FF46;
+  dashes:0;
+  width:5;
+  opacity:0.6;
+  z-index:6;
+}
+
+/* All mountain biking */
+way[mtb:type=allmountain]::bike,
+way[sac_scale=hiking]::bike,
+way[mtb:scale=1]::bike,
+way[mtb:scale=2]::bike,
+way[mtb:scale=3]::bike {
+  color:#93FF46;
+  dashes:16,5;
+  width:5;
+  opacity:0.6;
+  z-index:6;
+}
+
+/* Downhill biking */
+way[mtb:type=downhill]::bike,
+way[mtb:scale=4]::bike,
+way[mtb:scale=5]::bike {
+  color:#93FF46;
+  dashes:8,5;
+  width:5;
+  opacity:0.6;
+  z-index:6;
+}
+
+/* Biking disallowed or impossible:
+   e.g. motorways, nature reserves, climbing trails */
+way[bicycle=no]::bike,
+way[bicycle=private]::bike,
+way[access=no]::bike,
+way[access=private]::bike,
+way[sac_scale=~/mountain_hiking/]::bike,
+way[sac_scale=~/alpine_hiking/]::bike,
+way[highway=motorway]::bike {
+  color:#efa9a9;
+  width:8;
+  opacity:0.6;
+  dashes:8,24;
+  linecap:round;
+  z-index:6;
+}
+
+node[mtb:scale>=2] {
+  icon-image: symbols/crux.png;
+}

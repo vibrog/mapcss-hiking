@@ -1,3 +1,4 @@
+meta { title: "Hiking routes"; }
 
 relation[route=hiking] > way::trailblazed,
 relation[route=foot] > way::trailblazed,
