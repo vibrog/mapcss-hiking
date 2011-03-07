@@ -14,7 +14,6 @@ area[landuse=forest]
   fill-color:#AED0A0;
 }
 area[natural=scrub],
-area[natural=heath],
 area[landuse=orchard]
 {
   fill-color:#dfd;
@@ -26,8 +25,8 @@ area[landuse=farmland]
   fill-color:#FFC675;
 }
 area[landuse=meadow],
-area[landuse=field],
 area[landuse=grass],
+area[natural=heath],
 area[landuse=conservation],
 area[landuse=greenfield],
 area[natural=fell]
@@ -39,6 +38,9 @@ area[landuse=recreation_ground],
 area[landuse=village_green],
 area[landuse=cemetery],
 area[leisure=park],
+area[leisure=common],
+area[leisure=garden],
+area[tourism=zoo],
 area[leisure=pitch],
 area[leisure=track],
 area[leisure=playground],
@@ -57,6 +59,7 @@ area[landuse=allotments]
 area[landuse=industrial],
 area[landuse=commercial],
 area[landuse=military],
+area[landuse=railway],
 area[power=station],
 area[power=sub_station],
 area[landuse=port],
@@ -65,6 +68,17 @@ area[landuse=brownfield],
 area[landuse=quarry]
 {
   fill-color:#666;
+}
+
+area[amenity=school],
+area[amenity=college],
+area[amenity=university],
+area[amenity=kindergarten],
+area[amenity=hospital],
+area[amenity=prison]
+{
+  fill-color:#f0f0d8;
+  fill-opacity:0.3;
 }
 
 area[natural=water],
