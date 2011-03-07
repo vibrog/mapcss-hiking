@@ -1,15 +1,18 @@
 meta { title:"Biking"; }
 
-/* Commuter biking */
+/* Commuter or recreational cycleways */
 way[highway=cycleway]::bike,
 way[highway=footway][bicycle?]::bike,
 way[cycleway]::bike,
 way[cycleway:left]::bike,
-way[cycleway:right]::bike {
+way[cycleway:right]::bike,
+way[highway=track][!tracktype]::bike,
+way[highway=track][tracktype=grade1]::bike,
+way[highway=track][tracktype=grade2]::bike {
   color:#C02F24;
-  width:5;
-  opacity:0.6;
-  z-index:6;
+  width:6;
+  opacity:0.5;
+  z-index:-1;
 }
 
 /* Bicycle routes */
@@ -18,20 +21,8 @@ way[ncn]::bike, way[rcn]::bike, way[lcn]::bike,
 way[ncn_ref]::bike, way[rcn_ref]::bike, way[lcn_ref]::bike {
   color:#C02F24;
   width:10;
-  opacity:0.6;
-  z-index:6;
-}
-
-/* Carriage trails */
-way[highway=cycleway][surface=gravel]::bike,
-way[highway=track][!tracktype]::bike,
-way[highway=track][tracktype=grade1]::bike,
-way[highway=track][tracktype=grade2]::bike {
-  color:#C02F24;
-  dashes:16,5;
-  width:5;
-  opacity:0.6;
-  z-index:6;
+  opacity:0.5;
+  z-index:-1;
 }
 
 /* Cross country biking */
@@ -40,35 +31,38 @@ way[mtb:scale]::bike,
 relation[route=bicycle][network=mtb] > way[highway]::bike,
 relation[route=mtb] > way[highway]::bike {
   color:#93FF46;
-  dashes:0;
   width:5;
-  opacity:0.6;
-  z-index:6;
+  opacity:0.5;
+  z-index:-1;
 }
 
 /* All mountain biking */
 way[mtb:type=allmountain]::bike,
-way[sac_scale=hiking]::bike,
-way[mtb:scale=1]::bike,
-way[mtb:scale=2]::bike,
-way[mtb:scale=3]::bike {
+way[sac_scale=hiking]::bike {
   color:#93FF46;
-  dashes:16,5;
   width:5;
-  opacity:0.6;
-  z-index:6;
+  opacity:0.5;
+  z-index:-1;
 }
 
 /* Downhill biking */
-way[mtb:type=downhill]::bike,
-way[mtb:scale=4]::bike,
-way[mtb:scale=5]::bike {
-  color:#93FF46;
-  dashes:8,5;
+way[mtb:type=downhill]::bike {
+  color:#FF6;
   width:5;
-  opacity:0.6;
-  z-index:6;
+  opacity:0.5;
+  z-index:-1;
 }
+
+/* MTB difficulty marks */
+way[mtb:scale]::bike {
+  dashes-background-color: #F7403A;
+  dashes-background-opacity: 0.7;
+}
+way[mtb:scale=1]::bike { dashes:15,1; }
+way[mtb:scale=2]::bike { dashes:15,2; }
+way[mtb:scale=3]::bike { dashes:15,4; }
+way[mtb:scale=4]::bike { dashes:15,6; }
+way[mtb:scale=5]::bike { dashes:15,7; }
 
 /* Biking disallowed or impossible:
    e.g. motorways, nature reserves, climbing trails */
@@ -81,7 +75,7 @@ way[sac_scale=~/alpine_hiking/]::bike,
 way[highway=motorway]::bike {
   color:#efa9a9;
   width:8;
-  opacity:0.6;
+  opacity:0.5;
   dashes:8,24;
   linecap:round;
   z-index:6;
