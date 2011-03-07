@@ -25,9 +25,12 @@ way[ncn_ref]::bike, way[rcn_ref]::bike, way[lcn_ref]::bike {
   z-index:-1;
 }
 
-/* Cross country biking */
+/* Mountain biking, both cross country and all mountain */
 way[mtb:type=crosscountry]::bike,
+way[mtb:type=allmountain]::bike,
+way[mtb:type]::bike,
 way[mtb:scale]::bike,
+way[sac_scale=hiking]::bike,
 relation[route=bicycle][network=mtb] > way[highway]::bike,
 relation[route=mtb] > way[highway]::bike {
   color:#93FF46;
@@ -36,17 +39,9 @@ relation[route=mtb] > way[highway]::bike {
   z-index:-1;
 }
 
-/* All mountain biking */
-way[mtb:type=allmountain]::bike,
-way[sac_scale=hiking]::bike {
-  color:#93FF46;
-  width:5;
-  opacity:0.5;
-  z-index:-1;
-}
-
 /* Downhill biking */
-way[mtb:type=downhill]::bike {
+way[mtb:type=downhill]::bike,
+way[mtb:type=freeride]::bike {
   color:#FF6;
   width:5;
   opacity:0.5;
