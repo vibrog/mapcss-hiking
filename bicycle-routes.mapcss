@@ -18,7 +18,8 @@ way[highway=track][tracktype=grade2]::bike {
 /* Bicycle routes */
 relation[route=bicycle] > way[highway]::bike,
 way[ncn]::bike, way[rcn]::bike, way[lcn]::bike,
-way[ncn_ref]::bike, way[rcn_ref]::bike, way[lcn_ref]::bike {
+way[ncn_ref]::bike, way[rcn_ref]::bike, way[lcn_ref]::bike,
+way[route=bicycle]::bike {
   color:#C02F24;
   width:10;
   opacity:0.5;
