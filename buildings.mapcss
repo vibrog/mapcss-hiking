@@ -1,7 +1,6 @@
 meta { title:"Buildings"; }
 
-area[building],
-area[military=barracks]
+area[building]
 {
   fill-color:black;
   z-index:2;
@@ -22,4 +21,13 @@ area[aeroway=hangar],
 area[railway=station]
 {
   fill-color:#5a87de;
+}
+
+area[building=house],
+area[building=residential],
+area[building=garage],
+area[building=garages],
+area[military=barracks]
+{
+  fill-color:#9a5f21;
 }
