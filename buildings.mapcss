@@ -6,10 +6,10 @@ area[building]
   z-index:2;
 }
 area[building][amenity],
-area[building][shop],
-area[building][office],
-area[building][craft],
-area[building][factory],
+area[shop],
+area[office],
+area[craft],
+area[factory],
 area[man_made=works],
 area[amenity=parking][parking=multi-storey],
 area[building][sport],
