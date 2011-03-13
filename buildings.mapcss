@@ -12,10 +12,12 @@ area[building][office],
 area[building][craft],
 area[building][factory],
 area[man_made=works],
+area[amenity=parking][parking=multi-storey],
 area[leisure=sports_centre],
 area[leisure=stadium],
 area[military=bunker],
 area[aeroway=terminal],
+area[aeroway=hangar],
 area[railway=station]
 {
   fill-color:#5a87de;
