@@ -61,14 +61,16 @@ way[mtb:scale=4]::bike { dashes:15,6; }
 way[mtb:scale=5]::bike { dashes:15,7; }
 
 /* Biking disallowed or impossible:
-   e.g. motorways, nature reserves, climbing trails */
+   e.g. motorways, tunnels, nature reserves, climbing trails */
 way[bicycle=no]::bike,
 way[bicycle=private]::bike,
 way[access=no]::bike,
 way[access=private]::bike,
 way[sac_scale=~/mountain_hiking/]::bike,
 way[sac_scale=~/alpine_hiking/]::bike,
-way[highway=motorway]::bike {
+way[tunnel?][highway=trunk]::bike,
+way[tunnel?][highway=primary]::bike,
+way[highway=~/motorway/]::bike {
   color:#efa9a9;
   width:8;
   opacity:0.5;
