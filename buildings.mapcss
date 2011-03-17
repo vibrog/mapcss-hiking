@@ -6,11 +6,14 @@ area[building]
   z-index:2;
 }
 area[building][amenity],
-area[shop],
+area[building][shop],
 area[office],
 area[craft],
 area[factory],
+area[building][power],
 area[man_made=works],
+area[man_made=water_tower],
+area[man_made=monitoring_station],
 area[amenity=parking][parking=multi-storey],
 area[building][sport],
 area[building][leisure=sports_centre],
@@ -27,6 +30,7 @@ area[building=house],
 area[building=residential],
 area[building=garage],
 area[building=garages],
+area[building=farm],
 area[military=barracks]
 {
   fill-color:#9a5f21;
