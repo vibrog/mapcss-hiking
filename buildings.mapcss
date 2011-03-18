@@ -7,11 +7,13 @@ area[building]
 }
 area[building][amenity],
 area[building][shop],
+area[building][tourism],
 area[office],
 area[craft],
 area[factory],
 area[building][power],
 area[man_made=works],
+area[building=storage_tank],
 area[man_made=water_tower],
 area[man_made=monitoring_station],
 area[amenity=parking][parking=multi-storey],
@@ -27,10 +29,14 @@ area[railway=station]
 }
 
 area[building=house],
+area[building=detached],
+area[building=terrace],
+area[building=apartments],
 area[building=residential],
 area[building=garage],
 area[building=garages],
 area[building=farm],
+area[building=barn],
 area[military=barracks]
 {
   fill-color:#9a5f21;
