@@ -6,7 +6,7 @@ area[building]
   z-index:2;
 }
 area[building][amenity],
-area[building][shop],
+area[building=supermarket],
 area[building][shop],
 area[building][tourism],
 area[office],
@@ -23,8 +23,7 @@ area[amenity=towhall],
 area[amenity=courthouse],
 area[historic=castle],
 area[building][sport],
-area[building][leisure=sports_centre],
-area[building][leisure=stadium],
+area[building][leisure],
 area[military=bunker],
 area[aeroway=terminal],
 area[aeroway=hangar],
