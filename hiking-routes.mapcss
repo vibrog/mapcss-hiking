@@ -18,3 +18,8 @@ way[marked_trail=blue]::trailblazed
 {
   color:#0E3CCC;
 }
+
+way[trailblazed?][sac_scale]::trailblazed
+{
+  color:#d82d20;
+}
