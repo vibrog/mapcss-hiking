@@ -1,4 +1,4 @@
-meta { title:"Transportation"; }
+meta { title:"Transit"; }
 
 node|z15-[railway=station]::transportation,
 node|z15-[railway=halt]::transportation,
@@ -75,6 +75,7 @@ relation[route=tram] > way::transportation {
 
 relation[route=bus] > way::transportation {
   color:#f72b2b;
+  width:6;
 }
 
 relation[route=ferry] > way,
