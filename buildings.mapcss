@@ -4,6 +4,7 @@ area[building]
 {
   fill-color:black;
   z-index:2;
+  text:auto;
 }
 area[building][amenity],
 area[building=supermarket],
