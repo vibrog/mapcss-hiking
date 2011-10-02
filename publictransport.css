@@ -1,11 +1,11 @@
 meta { title:"Transit"; }
 
-node|z15-[railway=station]::transportation,
-node|z15-[railway=halt]::transportation,
-node|z15-[railway=tram_stop]::transportation,
-node|z15-[highway=bus_stop]::transportation,
-node|z15-[amenity=bus_station]::transportation,
-node|z15-[amenity=ferry_terminal]::transportation {
+node|z14-[railway=station]::transportation,
+node|z14-[railway=halt]::transportation,
+node|z14-[railway=tram_stop]::transportation,
+node|z14-[highway=bus_stop]::transportation,
+node|z14-[amenity=bus_station]::transportation,
+node|z14-[amenity=ferry_terminal]::transportation {
   symbol-shape:circle;
   symbol-fill-color:#FF6;
   symbol-fill-opacity:0.5;
@@ -56,7 +56,8 @@ node[amenity=ferry_terminal] {
 relation[route=train] > way::transportation,
 relation[route=subway] > way::transportation,
 relation[route=tram] > way::transportation,
-relation[route=bus] > way::transportation {
+relation[route=bus] > way::transportation,
+relation[route=trolleybus] > way::transportation {
   width:8;
   opacity:0.8;
   z-index:5;
@@ -73,7 +74,8 @@ relation[route=tram] > way::transportation {
   color:#0606FA;
 }
 
-relation[route=bus] > way::transportation {
+relation[route=bus] > way::transportation,
+relation[route=trolleybus] > way::transportation {
   color:#f72b2b;
   width:6;
 }
