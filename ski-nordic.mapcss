@@ -1,3 +1,5 @@
+meta { title:"Nordic skiing"; }
+
 way[piste:type=nordic],
 way[piste:type=sled],
 way[route=ski],
@@ -27,8 +29,9 @@ way[route=ski][piste:type=hike]
 }
 
 way[piste:type=nordic][lit?]::nightski,
+way[piste:type=nordic][piste:lit?]::nightski,
 way[piste:type=sled][lit?]::nightski,
-way[piste:lit?]::nightski
+way[piste:type=sled][piste:lit?]::nightski
 {
   color:#F90025;
   width:9;
@@ -38,6 +41,8 @@ way[piste:lit?]::nightski
 }
 
 way[piste:type=sled],
-way[piste:type=sled][lit?]::nightski {
+way[piste:type=sled][lit?]::nightski,
+way[piste:type=sled][piste:lit?]::nightski
+{
   color:#CDABDE;
 }

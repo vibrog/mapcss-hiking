@@ -1,3 +1,5 @@
+meta { title:"Alpine skiing"; }
+
 way[piste:type=downhill]
 {
   width:6;
@@ -9,7 +11,6 @@ way[piste:difficulty=novice] { color:#82FC82; }
 way[piste:difficulty=easy] { color:#8282FC; }
 way[piste:difficulty=intermediate] { color:#FC8282; }
 way[piste:difficulty=advanced] { color:#828282; }
-way[piste:difficulty=expert] { color:#828282; }
+way[piste:difficulty=expert] { color:#FF8040; }
 way[piste:difficulty=freeride] { color:#F6E760; }
 way[aerialway] { color:black; width:1.5; }
-
