@@ -56,3 +56,9 @@ area[military=barracks]
 {
   fill-color:#9a5f21;
 }
+
+area[building=cabin],
+area[building=hut]
+{
+  fill-color:#d68723;
+}
