@@ -105,7 +105,8 @@ way[railway=tram][!highway]
   dashes:8,5;
 }
 
-way[tunnel?]
+way[tunnel?],
+way[tunnel=culvert]
 {
   casing-width:0;
   opacity:0.4;
@@ -113,6 +114,7 @@ way[tunnel?]
 }
 way[bridge?],
 way[bridge=viaduct],
+way[bridge=aqueduct],
 way[bridge=suspension]
 {
   casing-width:+4;
