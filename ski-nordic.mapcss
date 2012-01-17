@@ -15,7 +15,7 @@ way[piste:grooming=classic],
 way[piste:grooming=skating],
 way[piste:grooming="classic+skating"]
 {
-  width:5;
+  width:3;
 }
 way[piste:grooming=scooter]
 {
@@ -25,7 +25,7 @@ way[piste:grooming=backcountry],
 way[route=ski][!piste:type][!piste:grooming],
 way[route=ski][piste:type=hike]
 {
-  dashes:12,8;
+  dashes:2,5;
 }
 
 way[piste:type=nordic][lit?]::nightski,
