@@ -11,15 +11,10 @@ way[piste:grooming]
   z-index:6;
 }
 
-way[piste:grooming=classic],
-way[piste:grooming=skating],
-way[piste:grooming="classic+skating"]
-{
-  width:3;
-}
 way[piste:grooming=scooter]
 {
   dashes:24,8;
+  width:2.5;
 }
 way[piste:grooming=backcountry],
 way[route=ski][!piste:type][!piste:grooming],
