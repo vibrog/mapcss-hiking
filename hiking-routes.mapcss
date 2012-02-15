@@ -3,8 +3,7 @@ meta { title: "Hiking routes"; }
 relation[route=hiking] > way::trailblazed,
 relation[route=foot] > way::trailblazed,
 way[trailblazed?]::trailblazed,
-way[marked_trail]::trailblazed,
-way[route=foot]::trailblazed
+way[marked_trail]::trailblazed
 {
   color:#D0006F;
   width:7;
@@ -18,8 +17,21 @@ way[marked_trail=blue]::trailblazed
 {
   color:#0E3CCC;
 }
-
 way[trailblazed?][sac_scale]::trailblazed
 {
   color:#d82d20;
+}
+
+relation[route][operator="Oslo kommune Bymiljøetaten"]
+ > way[!trailblazed][!marked_trail]::trailblazed
+{
+  width:0;
+}
+relation[route][operator="Oslo kommune Bymiljøetaten"]
+ > way::route
+{
+  color:#228b22;
+  width:8;
+  opacity:0.9;
+  z-index:0;
 }
