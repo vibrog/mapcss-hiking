@@ -76,6 +76,7 @@ way[highway=steps]
 
 /* Areas */
 area[amenity=parking],
+area[landuse=depot],
 area[highway][area?],
 area[railway=platform],
 area[highway=turning_circle]
