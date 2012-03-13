@@ -43,7 +43,7 @@ way[piste:type=sled][piste:lit?]::nightski
   color:#CDABDE;
 }
 
-way[snowplowing=no]
+way[snowplowing=no][highway][!piste:type][!piste:grooming]
 {
   dashes:2,5;
 }
