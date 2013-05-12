@@ -94,13 +94,11 @@ area[landuse=basin],
 area[landuse=reservoir],
 area[leisure$=pool],
 area[natural=wetland],
-area[natural=marsh],
 area[waterway=riverbank]
 {
   fill-color:#87D2E7;
 }
-area[natural=wetland],
-area[natural=marsh]
+area[natural=wetland]
 {
   opacity:0.6;
   fill-opacity:0.1;
