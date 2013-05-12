@@ -1,6 +1,9 @@
 meta { title:"Landscape"; }
 
 /* Default */
+canvas {
+  background-color:#222;
+}
 area {
   fill-opacity:0.4;
   width:1;
