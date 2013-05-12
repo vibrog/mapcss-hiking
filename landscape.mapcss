@@ -105,6 +105,11 @@ area[natural=marsh]
   opacity:0.6;
   fill-opacity:0.1;
 }
+area[natural=water][protect_class=12],
+area[waterway=riverbank][protect_class=12]
+{
+  fill-color:#33B3D7;
+}
 
 way[natural=coastline],
 way[waterway=riverbank],
