@@ -17,6 +17,8 @@ area[landuse=forest]
   fill-color:#AED0A0;
 }
 area[natural=scrub],
+area[natural=fell],
+area[landuse=greenfield],
 area[landuse=orchard]
 {
   fill-color:#dfd;
@@ -29,10 +31,7 @@ area[landuse=farmland]
 }
 area[landuse=meadow],
 area[landuse=grass],
-area[natural=heath],
-area[landuse=conservation],
-area[landuse=greenfield],
-area[natural=fell]
+area[natural=heath]
 {
   fill-color:#FFDE9B;
 }
@@ -49,12 +48,14 @@ area[leisure=sports_centre],
 area[leisure=stadium],
 area[leisure=track],
 area[leisure=playground],
-area[leisure=golf_course]
+area[leisure=dog_park],
+area[leisure*=golf]
 {
   fill-color:#9bb93c;
 }
 
 area[landuse=residential],
+area[landuse=farmyard],
 area[landuse=retail],
 area[landuse=allotments]
 {
@@ -70,6 +71,7 @@ area[power=sub_station],
 area[landuse=port],
 area[landuse=landfill],
 area[landuse=brownfield],
+area[landuse=construction],
 area[landuse=quarry]
 {
   fill-color:#666;
@@ -90,6 +92,7 @@ area[natural=water],
 area[natural=pond],
 area[landuse=basin],
 area[landuse=reservoir],
+area[leisure$=pool],
 area[natural=wetland],
 area[natural=marsh],
 area[waterway=riverbank]
@@ -108,6 +111,7 @@ way[waterway=riverbank],
 way[waterway=canal],
 way[waterway=river],
 way[waterway=stream],
+way[waterway=slide],
 way[waterway=ditch],
 way[waterway=drain]
 {
@@ -130,9 +134,9 @@ way[waterway=riverbank]
   width:1;
 }
 
-way[leisure=nature_reserve],
-way[boundary=national_park],
-way[boundary=protected_area]
+area[leisure=nature_reserve],
+area[boundary=national_park],
+area[boundary=protected_area]
 {
   color:#009c00;
   width:2;
@@ -142,6 +146,5 @@ way[boundary=administrative]
 {
   color:#be5abe;
   width:3;
-  opacity:0.4;
   dashes:9,3,2,3;
 }
