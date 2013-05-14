@@ -55,8 +55,7 @@ relation[route][operator*="kommune"] > way::route
 - terrengsykkelritt: route=mtb, network=mtb
 */
 
-relation[route=bicycle] > way::route,
-relation[network$="cn"] > way::route
+relation[route=bicycle] > way::route
 {
   color:#8c0512;
   width:6;
@@ -65,7 +64,7 @@ relation[network$="cn"] > way::route
 }
 
 relation[route=mtb] > way::route,
-relation[route][network=mtb] > way::route,
+relation[route=bicycle][network=mtb] > way::route,
 way[mtb=designated]::route
 {
   color:#678e2a;
@@ -84,11 +83,15 @@ way[mtb=designated]::route
 way[highway][bicycle=dismount],
 way[highway][bicycle=no],
 way[highway][bicycle=private],
+way[highway][access=no],
+way[highway][access=private],
 way[highway=footway][bicycle!=yes],
-way[highway][tunnel?][highway=trunk],
-way[highway][tunnel?][highway=primary],
-way[highway=~/trunk/][oneway?],
-way[highway=~/motorway/]
+way[highway][foot=designated],
+way[highway=trunk][tunnel?],
+way[highway=primary][tunnel?],
+way[highway$=link],
+way[highway=trunk][oneway?],
+way[highway=motorway]
 {
   color:salmon;
 }

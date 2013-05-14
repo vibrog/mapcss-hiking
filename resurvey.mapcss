@@ -3,7 +3,8 @@ meta { title: "Survey annotations"; }
 way|z15-[fixme]::fixme,
 way|z15-[note=~/fixme|FIXME/]::fixme,
 way|z15-[note=~/todo|TODO/]::fixme,
-way|z15-[highway=road]::fixme
+way|z15-[highway=road]::fixme,
+way|z15-[highway=track][!tracktype]::fixme
 {
   color:#FC0;
   width:3;

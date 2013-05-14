@@ -7,68 +7,91 @@ network=.cn, .cn_ref=*
 route=mtb, mtb:type=crosscountry/allmountain/downhill
 */
 
-
 /* Commuter or recreational cycleways */
-way[highway=cycleway],
-way[highway=footway][bicycle?],
-way[cycleway],
-way[cycleway:left],
-way[cycleway:right],
-way[highway=track][!tracktype],
-way[highway=track][tracktype=grade1],
-way[highway=track][tracktype=grade2] {
-  color:#007ACC;
+way[highway=cycleway]::bike,
+way[highway=footway][bicycle=yes]::bike,
+way[cycleway]::bike,
+way[cycleway:left]::bike,
+way[cycleway:right]::bike,
+way[highway=track][tracktype=grade1]::bike,
+way[highway=track][tracktype=grade2]::bike,
+way[highway=track][tracktype=grade3]::bike,
+way[highway=unclassified][motor_vehicle=private]::bike
+{
+  color:#47B6FF;
+  width:6;
+  z-index:-1;
+  dashes:20,7;
 }
-
-/* low-traffic roads */
-/* Dele i paved/unpaved? Feks unclassified */
 
 /* Bicycle routes */
-relation[route=bicycle] > way[highway]::bike,
+relation[route=bicycle] > way::bike,
+relation[route=foot][bicycle=yes] > way::bike,
 way[ncn]::bike, way[rcn]::bike, way[lcn]::bike,
 way[ncn_ref]::bike, way[rcn_ref]::bike, way[lcn_ref]::bike,
-way[route=bicycle]::bike {
+way[route=bicycle]::bike
+{
   color:#47B6FF;
-  width:10;
+  width:8;
   z-index:-1;
+  dashes:0;
 }
 
-/* Cross country routes */
-relation[route=bicycle][network=mtb] > way[highway]::bike,
-relation[route=mtb] > way[highway]::bike,
-relation[route=foot][bicycle=yes] > way[highway]::bike {
+/* Mountain biking routes */
+relation[route=mtb] > way::bike,
+relation[route=bicycle][network=mtb] > way::bike,
+way[mtb=designated]::bike
+{
   color:#7ACC00;
   width:6;
   z-index:-1;
+  dashes:0;
 }
 
-/* Biking on non-sustainable trails are not recommended */
-way[highway][foot=designated],
-way[highway][surface=mud],
-way[highway][surface=peat],
-way[highway][sac_scale=~/mountain_hiking/],
-way[highway][sac_scale=~/alpine_hiking/] {
-  color:#FF475A;
+/* Difficult singletracks */
+way[mtb:scale>1]::bike
+{
+  color:#7ACC00;
+  width:6;
+  z-index:-1;
+  dashes:12,12;
+}
+way[mtb:scale>3]::bike
+{
+  dashes:7,8;
 }
 
-/* Biking disallowed or impossible:
-   e.g. motorways, tunnels, nature reserves, climbing trails */
+/* Biking disallowed
+   e.g. motorways, tunnels, nature reserves */
+way[highway][bicycle=dismount],
 way[highway][bicycle=no],
 way[highway][bicycle=private],
 way[highway][access=no],
 way[highway][access=private],
-way[highway][tunnel?][highway=trunk],
-way[highway][tunnel?][highway=primary],
-way[highway=~/trunk/][oneway?],
-way[highway=~/motorway/] {
-  color:#FF475A;
+way[highway=footway][bicycle!=yes],
+way[highway][foot=designated],
+way[highway=trunk][tunnel?],
+way[highway=primary][tunnel?],
+way[highway$=link],
+way[highway=trunk][oneway?],
+way[highway=motorway]
+{
+  color:salmon;
 }
 
-node[amenity=bicycle_parking],
-node[amenity=bicycle_rental] {
-  symbol-shape:circle;
-  symbol-size:20;
-  symbol-fill-color:#FF6;
-  symbol-fill-opacity:0.5;
+area[leisure][bicycle=no],
+area[boundary][bicycle=no]
+{
+  fill-color:#009c00;
+  fill-opacity:0.1;
 }
 
+/* Biking not recommended
+   e.g. non-sustainable trails or climbing routes */
+way[highway][surface=mud],
+way[highway][surface=peat],
+way[highway][sac_scale=~/mountain_hiking/],
+way[highway][sac_scale=~/alpine_hiking/]
+{
+  color:salmon;
+}
