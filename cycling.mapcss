@@ -13,9 +13,7 @@ way[highway=footway][bicycle=yes]::bike,
 way[cycleway]::bike,
 way[cycleway:left]::bike,
 way[cycleway:right]::bike,
-way[highway=track][tracktype=grade1]::bike,
-way[highway=track][tracktype=grade2]::bike,
-way[highway=track][tracktype=grade3]::bike,
+way[highway=track][tracktype=~/grade[1-3]/]::bike,
 way[highway=unclassified][motor_vehicle=private]::bike
 {
   color:#47B6FF;
