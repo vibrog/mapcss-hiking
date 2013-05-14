@@ -1,4 +1,4 @@
-meta { title:"Transit"; }
+meta { title: "Public transport"; }
 
 node|z14-[railway=station]::transportation,
 node|z14-[railway=halt]::transportation,

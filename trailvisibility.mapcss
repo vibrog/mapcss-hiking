@@ -1,4 +1,4 @@
-meta { title: "Hiking trail visibility"; }
+meta { title: "Trail visibility"; }
 
 way[trail_visibility=no] { dashes:4,2,4,6; opacity:0.4; }
 way[trail_visibility=horrible] { dashes:4,2,4,6; opacity:0.6; }
