@@ -1,0 +1,17 @@
+meta { title:"Signposts"; }
+node[information=guidepost][hiking?], node[information=guidepost][ski?] {
+  symbol-shape:circle;
+  symbol-size:14;
+  symbol-stroke-width:1.25;
+  icon-image:none;
+}
+node[information=guidepost][hiking?] {
+  symbol-fill-color:#0E3CCC;
+  symbol-stroke-color:#7FC3D8;
+}
+node[information=guidepost][ski?] {
+  symbol-stroke-color:#F90025;
+}
+node[information=guidepost][ski?][!hiking] {
+  symbol-fill-color:#DD5840;
+}

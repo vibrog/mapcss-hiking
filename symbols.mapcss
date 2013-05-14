@@ -1,0 +1,244 @@
+meta { title: "Symbols"; }
+node:tagged { icon-width: 20; }
+
+*[tourism=viewpoint] { icon-image: symbols/viewpoint.svg; }
+*[tourism=viewpoint][man_made=tower] { icon-image: symbols/observationtower.svg; }
+*[man_made=tower][tower:type=observation] { icon-image: symbols/observationtower.svg; }
+*[amenity=parking] { icon-image: symbols/parking.svg; }
+*[amenity=bicycle_parking] { icon-image: symbols/parking-bicycle.svg; }
+*[amenity=place_of_worship] { icon-image: symbols/church.svg; }
+*[amenity=place_of_worship][hiking?] { icon-image: symbols/chapel.svg; }
+*[building=church], *[building=cathedral] { icon-image: symbols/church.svg; }
+*[building=chapel] { icon-image: symbols/chapel.svg; }
+*[amenity=grave_yard], *[landuse=cemetery] { icon-image: symbols/cemetery.svg; }
+*[amenity=bbq] { icon-image: symbols/bonfire.svg; }
+*[amenity=toilets] { icon-image: symbols/toilet.svg; }
+*[amenity=toilets][pitlatrine?] { icon-image: symbols/toilet-outhouse.svg; }
+*[amenity=toilets][diaper?] { }
+*[amenity=shower] { icon-image: symbols/shower.svg; }
+*[amenity=restaurant] { icon-image: symbols/restaurant.svg; }
+*[amenity=fast_food] { icon-image: symbols/fastfood.svg; }
+*[amenity=bar], *[amenity=pub], *[amenity=biergarten] { icon-image: symbols/bar.svg; }
+*[highway=bus_stop] { icon-image: symbols/bus.svg; }
+*[amenity=bus_station] { icon-image: symbols/bus.svg; }
+*[railway=station] { icon-image: symbols/railway.svg; }
+*[railway=halt] { icon-image: symbols/railway.svg; }
+*[railway=tram_stop] { icon-image: symbols/tram.svg; }
+*[amenity=ferry_terminal] { icon-image: symbols/ferry.svg; }
+*[leisure=marina] { icon-image: symbols/marina.svg; }
+*[leisure=slipway] { icon-image: symbols/slipway.svg; }
+*[seamark=anchorage] { icon-image: symbols/anchorage.svg; }
+*[amenity=taxi] { icon-image: symbols/taxi.svg; }
+*[aeroway=aerodrome] { icon-image: symbols/airport.svg; }
+*[aeroway=aerodrome][seaplane?] { icon-image: symbols/seaplane.svg; }
+*[aeroway=helipad] { icon-image: symbols/helipad.svg; }
+*[shop] { icon-image: symbols/shop.svg; }
+*[amenity=marketplace] { icon-image: symbols/shop.svg; }
+*[shop=kiosk], *[amenity=ice_cream] { icon-image: symbols/kiosk.svg; }
+*[shop=supermarket] { icon-image: symbols/grocery.svg; }
+*[shop=convenience] { icon-image: symbols/grocery.svg; }
+*[shop=greengrocer] { icon-image: symbols/grocery.svg; }
+*[shop=farm], *[tourism=farm] { icon-image: symbols/agritourism.svg; }
+*[shop=alcohol] { icon-image: symbols/liquorstore.svg; }
+*[shop=ticket] {  icon-image: symbols/ticket.svg; }
+*[amenity=pharmacy] { icon-image: symbols/pharmacy.svg; }
+*[shop=car_repair] { icon-image: symbols/garage.svg; }
+*[service=repair] { icon-image: symbols/garage.svg; }
+*[service:bicycle:repair?] { icon-image: symbols/garage.svg; }
+*[amenity=cafe] { icon-image: symbols/cafe.svg; }
+*[amenity=hospital], *[amenity=clinic] { icon-image: symbols/hospital.svg; }
+*[amenity=nursing_home] { }
+*[amenity=doctors] { icon-image: symbols/doctor.svg; }
+*[amenity=first_aid], *[amenity=rescue_box] { icon-image: symbols/firstaid.svg; }
+*[amenity=dentist] { icon-image: symbols/dentist.svg; }
+*[natural=cave_entrance] { icon-image: symbols/cave.svg; }
+*[natural][shelter?] { icon-image: symbols/cave.svg; }
+*[barrier$=stile] { icon-image: symbols/stile.svg; }
+*[ford] { icon-image: symbols/ford.svg; }
+*[sport=climbing] { icon-image: symbols/climbing.svg; }
+*[sport=paragliding] { icon-image: symbols/freeflying.svg; }
+*[sport=free_flying] { icon-image: symbols/freeflying.svg; }
+*[sport=shooting] { icon-image: symbols/shootingrange.svg; }
+*[sport=shooting][shooting=clay_pigeon] { icon-image: symbols/skeet.svg; }
+*[sport=shooting][shooting=pistol] { icon-image: symbols/pistolshooting.svg; }
+*[amenity=hunting_stand] { icon-image: symbols/hunting.svg; }
+*[sport=golf] { icon-image: symbols/golf.svg; }
+*[sport=miniature_golf] { icon-image: symbols/minigolf.svg; }
+*[sport=bowling], *[sport="9pin"], *[sport="10pin"] { icon-image: symbols/bowling.svg; }
+*[sport=diving], *[sport=cliff_diving] { icon-image: symbols/diving.svg; }
+*[sport=athletics] { icon-image: symbols/athletics.svg; }
+*[sport=athletics][building] { icon-image: symbols/athletics-indoor.svg; }
+*[amenity=fitness_center], *[amenity=gym] { icon-image: symbols/gymnastics-indoor.svg; }
+*[sport=tennis] { icon-image: symbols/tennis.svg; }
+*[sport=raquet] { icon-image: symbols/tennis.svg; }
+*[sport=squash] { icon-image: symbols/squash.svg; }
+*[sport=table_tennis] { icon-image: symbols/tabletennis.svg; }
+*[sport=beachvolleyball] { icon-image: symbols/sandvolleyball.svg; }
+*[sport=skateboard] { icon-image: symbols/skateboard.svg; }
+*[sport=bmx] { icon-image: symbols/bmx.svg; }
+*[sport=archery] { icon-image: symbols/archery.svg; }
+*[sport=badminton] { icon-image: symbols/badminton.svg; }
+*[sport=cricket], *[sport=cricket_nets] { icon-image: symbols/cricket.svg; }
+*[sport=basketball] { icon-image: symbols/basketball.svg; }
+*[sport=boxing] { icon-image: symbols/boxing.svg; }
+*[sport=fencing] { icon-image: symbols/fencing.svg; }
+*[sport=scuba_diving] { icon-image: symbols/scubadiving.svg; }
+*[leisure=fishing], *[sport=fishing], *[fishing?] { icon-image: symbols/fishing.svg; }
+*[leisure=dance] { icon-image: symbols/dancing.svg; }
+*[sport=equestrian] { icon-image: symbols/horse-equestrian.svg; }
+*[sport=horse_racing] { icon-image: symbols/horse-hoppodrome.svg; }
+*[sport=gymnastics] { icon-image: symbols/gymnastics.svg; }
+*[sport=gymnastics][building] { icon-image: symbols/gymnastics-indoor.svg; }
+*[sport=swimming] { icon-image: symbols/swimming.svg; }
+*[sport=swimming][building] { icon-image: symbols/swimming-indoor.svg; }
+*[sport=ice_stock] { icon-image: symbols/curling.svg; }
+*[sport=curling] { icon-image: symbols/curling.svg; }
+*[leisure=ice_rink] { icon-image: symbols/icerink.svg; }
+*[leisure=ice_rink][building] { icon-image: symbols/icerink-indoor.svg; }
+*[sport=bandy] { icon-image: symbols/bandy.svg; }
+*[sport=hockey] { icon-image: symbols/.svg; }
+*[sport=ice_hockey] { icon-image: symbols/hockey.svg; }
+*[sport=skating] { icon-image: symbols/skating.svg; }
+*[sport=water_ski] { icon-image: symbols/waterskiing.svg; }
+*[sport=sailing] { icon-image: symbols/sailing.svg; }
+*[sport=windsurfing] { icon-image: symbols/windsurfing.svg; }
+*[sport=weightlifting] { icon-image: symbols/weightlifting.svg; }
+*[sport=wrestling] { icon-image: symbols/wrestling.svg; }
+*[sport=soccer] { icon-image: symbols/soccer.svg; }
+*[sport$=football], *[sport^=rugby] { icon-image: symbols/football.svg; }
+*[sport=handball], *[sport=team_handball] { icon-image: symbols/handball.svg; }
+*[sport=martial_arts], *[sport=judo], *[sport=taekwondo], *[sport=karate] { icon-image: symbols/martialarts.svg; }
+*[sport=motor], *[sport=karting], *[sport=motocross] { icon-image: symbols/motorsport.svg; }
+*[sport=multi] { icon-image: symbols/multi.svg; }
+*[sport=multi][building] { icon-image: symbols/multi-indoor.svg; }
+*[sport=rowing] { icon-image: symbols/rowing.svg; }
+*[sport=canoe] { icon-image: symbols/paddling.svg; }
+*[sport=whitewater_canoe] { icon-image: symbols/paddling-whitewater.svg; }
+*[sport=rafting] { icon-image: symbols/rafting.svg; }
+*[rental=canoe] { icon-image: symbols/canoe.svg; }
+*[tourism=information][information!=guidepost] { icon-image: symbols/information.svg; }
+*[tourism=information][board_type=nature] { icon-image: symbols/information-nature.svg; }
+*[tourism=information][information=office] { icon-image: symbols/information-office.svg; }
+*[amenity=shelter] { icon-image: symbols/leanto.svg; }
+*[amenity=shelter][shelter_type=rock_shelter] { icon-image: symbols/cave.svg; }
+*[tourism=lean_to] { icon-image: symbols/leanto.svg; }
+*[amenity=shelter][shelter_type=lean_to] { icon-image: symbols/leanto.svg; }
+*[tourism=basic_hut] { icon-image: symbols/hut.svg; }
+*[tourism=cabin][access=public] { icon-image: symbols/hut.svg; }
+*[tourism=cabin][emergency?] { icon-image: symbols/hut.svg; }
+*[amenity=shelter][shelter_type=basic_hut] { icon-image: symbols/hut.svg; }
+*[tourism=cabin][service=no] { icon-image: symbols/hut-unprovisioned.svg; }
+*[tourism=wilderness_hut] { icon-image: symbols/hut-unprovisioned.svg; }
+*[tourism=cabin][service=self] { icon-image: symbols/hut-selfservice.svg; }
+*[tourism=wilderness_hut][shop=provisions] { icon-image: symbols/hut-selfservice.svg; }
+*[tourism=alpine_hut] { icon-image: symbols/hut-staffed.svg; }
+*[rental=cabin] { icon-image: symbols/hut.svg; }
+*[tourism=picnic_area] { icon-image: symbols/picnicarea.svg; }
+*[leisure=picnic_table] { icon-image: symbols/picnicarea.svg; }
+*[tourism=hotel] { icon-image: symbols/hotel.svg; }
+*[tourism=motel] { icon-image: symbols/hotel.svg; }
+*[tourism=guest_house] { icon-image: symbols/hotel.svg; }
+*[tourism=bed_and_breakfast] { icon-image: symbols/hotel.svg; }
+*[tourism=hostel] { icon-image: symbols/hostel.svg; }
+*[tourism=chalet] { icon-image: symbols/chalet.svg; }
+*[tourism=caravan_site] { icon-image: symbols/caravansite.svg; }
+*[tourism=camp_site] { icon-image: symbols/campsite.svg; }
+*[tourism=camp_site][backcountry?] { icon-image: symbols/lavvu.svg; }
+*[shelter_type=lavvu] { icon-image: symbols/lavvu.svg; }
+*[leisure=playground] { icon-image: symbols/playground.svg; }
+*[leisure=ski_playground] { icon-image: symbols/skiplayground.svg; }
+*[piste:type=playground] { icon-image: symbols/skiplayground.svg; }
+*[natural=beach] { icon-image: symbols/bath.svg; }
+*[natural=beach][nudism?] { icon-image: symbols/bath-nude.svg; }
+*[sport=ski_jump_take_off] { icon-image: symbols/skijump.svg; }
+*[sport=biathlon] { icon-image: symbols/biathlon.svg; }
+*[amenity=drinking_water] { icon-image: symbols/drinkingwater.svg; }
+*[amenity=watering_place] { icon-image: symbols/drinkingwater.svg; }
+*[natural=spring] { icon-image: symbols/drinkingwater.svg; }
+*[waterway=water_point] { icon-image: symbols/drinkingwater.svg; }
+*[man_made=water_well] { icon-image: symbols/drinkingwater.svg; }
+*[amenity=bank] { icon-image: symbols/bank.svg; }
+*[amenity=atm] { icon-image: symbols/bank.svg; }
+*[amenity=fuel] { icon-image: symbols/fuel.svg; }
+*[amenity=phone] { icon-image: symbols/telephone.svg; }
+*[amenity=recycling] { icon-image: symbols/waste-recycling.svg; }
+*[amenity=waste_basket] { icon-image: symbols/waste.svg; }
+*[amenity=waste_disposal] { icon-image: symbols/waste.svg; }
+*[amenity=waste_disposal][waste=excrement][motorhome?] { icon-image: symbols/waste-rv.svg; }
+*[amenity=waste_disposal][waste=excrement][boat?] { icon-image: symbols/waste-boat.svg; }
+*[amenity=library] { icon-image: symbols/library.svg; }
+*[amenity=post_office] { icon-image: symbols/postalservices.svg; }
+*[amenity=police] { icon-image: symbols/police.svg; }
+*[amenity=fire_station] { icon-image: symbols/firestation.svg; }
+*[amenity=cinema] { icon-image: symbols/cinema.svg; }
+*[amenity=theatre] { icon-image: symbols/theatre.svg; }
+*[amenity=arts_centre] { icon-image: symbols/artscentre.svg; }
+*[amenity=community_centre] { icon-image: symbols/artscentre.svg; }
+*[tourism=attraction] { icon-image: symbols/attraction.svg; }
+*[tourism=artwork] { icon-image: symbols/artwork.svg; }
+*[amenity=fountain] { icon-image: symbols/artwork.svg; }
+*[tourism=museum] { icon-image: symbols/museum.svg; }
+*[historic] { icon-image: symbols/culturalheritage.svg; }
+*[ruins?] { icon-image: symbols/culturalheritage.svg; }
+*[historic=archaeological_site] { icon-image: symbols/relic.svg; }
+*[historic=tomb][tomb=tumulus] { icon-image: symbols/relic.svg; }
+*[historic][protected] { icon-image: symbols/relic.svg; }
+*[historic=castle], *[historic=fort], *[site_type=fortification] { icon-image: symbols/fortified.svg; }
+*[historic=monument], *[historic=memorial] { icon-image: symbols/attraction.svg; }
+*[historic=farm] { icon-image: symbols/ruralfarmyard.svg; }
+*[historic=mine],
+*[historic=mineshaft],
+*[historic=adit],
+*[man_made=mineshaft],
+*[man_made=adit]
+{ icon-image: symbols/mine.svg; }
+*[waterway=waterfall] { icon-image: symbols/waterfall.svg; }
+*[leisure=nature_reserve] { icon-image: symbols/conservationarea.svg; }
+*[leisure=bird_hide] { icon-image: symbols/birdcolony.svg; }
+*[leisure=park] { icon-image: symbols/park.svg; }
+*[geological] { icon-image: symbols/geological.svg; }
+*[leisure=common], *[landuse=recreation_ground] { icon-image: symbols/recreationarea.svg; }
+
+*[mtb:scale] { icon-image: symbols/obstacle.svg; }
+*[barrier=log], *[barrier=windfall] { icon-image: symbols/obstacle.svg; }
+*[barrier=cattle_grid] { icon-image: symbols/bumps.svg; }
+*[highway=crossing][supervised?] { icon-image: symbols/crossing-footway-children.svg; }
+
+*[leisure=dog_park],
+*[amenity=animal_training],
+*[tourism=zoo],
+*[amenity=animal_shelter],
+*[amenity=animal_boarding],
+*[amenity=veterinary],
+*[shop=pet],
+*[sport=dog_racing]
+{ icon-image: symbols/zoo.svg; }
+
+*[man_made=surveillance] { icon-image: symbols/surveillancecamera.svg; }
+*[highway=speed_camera] { icon-image: symbols/speedcamera.svg; }
+*[highway=passing_place] { icon-image: symbols/passingplace.svg; }
+*[amenity=post_box] { icon-image: symbols/postbox.svg; }
+*[amenity=wifi], *[wifi?] { icon-image: symbols/wifi.svg; }
+*[amenity=bicycle_rental] { icon-image: symbols/bicycle-rental.svg; }
+*[amenity=ev_charging] { icon-image: symbols/chargingstation.svg; }
+*[amenity=charging_station] { icon-image: symbols/chargingstation.svg; }
+*[man_made=raft] { icon-image: symbols/ferry-cable.svg; }
+
+*[tourism=information][information=guidepost] { icon-image: symbols/signpost.svg; icon-width: 16; }
+
+*[natural=tree] { icon-image: symbols/tree.svg; icon-width: 15; }
+*[natural=stone] { icon-image: symbols/stone.svg; icon-width: 15; }
+*[man_made=cairn] { icon-image: symbols/cairn.svg; icon-width: 15; }
+*[man_made=survey_point] { icon-image: symbols/surveypoint.svg; icon-width: 15; }
+*[man_made=tower], *[man_made=mast], *[man_made=beacon] { icon-image: symbols/tower.svg; icon-width: 15; }
+*[natural=peak] { icon-image: symbols/peak.svg; icon-width: 15; }
+
+*[barrier$=gate],
+*[barrier=chain],
+*[barrier=cycle_barrier],
+*[barrier=bollard],
+*[barrier=block]
+{ icon-image: symbols/roadblock.svg; icon-width: 15; }
+*[barrier=toll_booth] { icon-image: symbols/tollroad.svg; }
+*[barrier=ditch] { icon-image: symbols/pithole.svg; icon-width: 15; }
+*[barrier=ditch][indistinct?] { icon-image: symbols/depression.svg; icon-width: 15; }
