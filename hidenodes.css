@@ -1,18 +1,18 @@
-meta { title:"Hide nodes"; }
+meta { title: "Hide nodes"; }
 canvas {
   default-points: false;
 }
 node|z18- {
-  symbol-shape:square;
-  symbol-size:5;
-  symbol-stroke-width:1;
-  symbol-stroke-color:#900;
-  symbol-stroke-opacity:1;
+  symbol-shape: square;
+  symbol-size: 4;
+  symbol-stroke-width: 1;
+  symbol-stroke-color: #C00;
+  symbol-stroke-opacity: 1;
 }
 node|z18-:connection {
-  symbol-size:7;
+  symbol-size: 6;
 }
-node|z18-[eval(JOSM_search("-untagged"))] {
-  symbol-fill-color:#900;
-  symbol-fill-opacity:1;
+node|z18-:tagged {
+  symbol-fill-color: #C00;
+  symbol-fill-opacity: 1;
 }
