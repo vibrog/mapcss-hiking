@@ -45,29 +45,27 @@ The style sheets are modular, making reuse and customization easier.
 
 ## Installation and usage
 
-Open [JOSM][] **Preferences** and add the wanted modules to
-your **Map Paint Styles** list. To do this simply paste the URL
-to the raw view, e.g.
+Open [JOSM][] **Preferences** and add the style sheet to your
+**Map Paint Styles** list by pasting this URL:
+
+<http://www.vidargundersen.com/mapcss-hiking.zip>
+
+These style sheets are intended used on dark background (85% gray),
+equivalent to the `color.background=#222222` setting, and
+the area object opacity will override `mappaint.fillalpha`.
+
+To use modules separately, clone the GitHub repository
+or use the raw view URL:
+
 <https://github.com/vibrog/mapcss-hiking/raw/master/roads.mapcss>
 
-These style sheets are intended used with a dark canvas, e.g.
-`color.background=#222222` (87% gray)
-which is equivalent to the following [MapCSS][]:
-
-    canvas { background-color:#222; }
-
-Area object opacity overrides `mappaint.fillalpha`:
-
-    area { fill-opacity:0.4; }
-
-Remember that order is relevant,
-so loading style sheets in this order will give an intended result:
+Loading the style sheets in this order will give an intended result:
 
     @import("landscape.mapcss");
     @import("roads.mapcss");
-    @import("buildings.mapcss");
     @import("trailvisibility.mapcss");
     @import("routes.mapcss");
+    @import("buildings.mapcss");
     @import("symbols.mapcss");
 
 For winter activities:
@@ -75,7 +73,10 @@ For winter activities:
     @import("ski-nordic.mapcss");
     @import("ski-alpine.mapcss");
 
-The `@import`rule are not yet supported by [JOSM][].  
+Hide node handles to reduce clutter:
+
+    @import("hidenodes.mapcss");
+
 More: [Details on JOSM's MapCSS implementation][5].
 
 
