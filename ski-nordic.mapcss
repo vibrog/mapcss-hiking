@@ -17,6 +17,7 @@ way[piste:grooming=scooter]::ski
   width:3;
   dashes:22,8;
 }
+
 way[piste:grooming=backcountry]::ski,
 way[route=ski][!piste:type][!piste:grooming]::ski,
 way[route=ski][piste:type=hike]::ski
@@ -37,11 +38,11 @@ way[piste:type=sled][piste:lit?]::nightski
   z-index:-1;
 }
 
-way[piste:grooming$=skating]::ski,
-way[piste:grooming$=skating][lit?]::nightski,
-way[piste:grooming$=skating][piste:lit?]::nightski
+way[piste:grooming*=skating]::ski,
+way[piste:grooming*=skating][lit?]::nightski,
+way[piste:grooming*=skating][piste:lit?]::nightski
 {
-  color:#fb3e00;
+  color:#FB3E00;
 }
 
 way[piste:type=sled]::ski,
