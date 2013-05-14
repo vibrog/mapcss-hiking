@@ -68,7 +68,6 @@ so loading style sheets in this order will give an intended result:
     @import("buildings.mapcss");
     @import("trailvisibility.mapcss");
     @import("routes.mapcss");
-    @import("hiking-signposts.mapcss");
     @import("symbols.mapcss");
 
 For winter activities:

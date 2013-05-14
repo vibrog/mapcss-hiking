@@ -1,13 +1,43 @@
 meta { title: "Survey annotations"; }
-way|z16-[fixme],
-way|z16-[note=~/fixme|FIXME/],
-way|z16-[note=~/todo|TODO/],
-way|z16-[highway=road] {
-  color:#F0A;
+
+way|z15-[fixme]::fixme,
+way|z15-[note=~/fixme|FIXME/]::fixme,
+way|z15-[note=~/todo|TODO/]::fixme,
+way|z15-[highway=road]::fixme
+{
+  color:#FC0;
+  width:3;
+  opacity:.8;
+  dashes:20,4;
+  z-index:-4;
 }
-node|z16-[fixme],
-node|z16-[noexit=no] {
+node|z15-[building][building!=entrance]::fixme,
+node|z15-[fixme]::fixme,
+node|z15-[noexit=no]::fixme
+{
   symbol-shape:circle;
-  symbol-fill-color:#F0A;
-  symbol-size:10;
+  symbol-fill-color:#FC0;
+  symbol-fill-opacity:.65;
+  symbol-size:17;
+  z-index:-4;
 }
+
+area[building=yes],
+area[landuse=grass],
+area[landuse=conservation],
+area[natural=marsh]
+{ fill-color:#FC0; }
+
+/*
+way[highway][access][access!=public]::access,
+way[highway][motor_vehicle][motor_vehicle!=public]::access,
+way[highway][toll=yes]::access
+{
+ width:7;
+ color:orange;
+ opacity:0.8;
+ dashes:10,18;
+ linecap:round;
+ z-index:4;
+}
+*/
