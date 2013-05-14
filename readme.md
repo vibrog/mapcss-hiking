@@ -54,8 +54,7 @@ These style sheets are intended used on dark background (85% gray),
 equivalent to the `color.background=#222222` setting, and
 the area object opacity will override `mappaint.fillalpha`.
 
-To use modules separately, clone the GitHub repository
-or use the raw view URL:
+To use modules separately, add the raw view URL:
 
 <https://github.com/vibrog/mapcss-hiking/raw/master/roads.mapcss>
 

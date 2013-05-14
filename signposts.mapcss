@@ -1,5 +1,7 @@
 meta { title:"Signposts"; }
-node[information=guidepost][hiking?], node[information=guidepost][ski?] {
+node|z14-[information=guidepost][hiking?],
+node|z14-[information=guidepost][ski?]
+{
   symbol-shape:circle;
   symbol-size:14;
   symbol-stroke-width:1.25;

@@ -242,3 +242,5 @@ node:tagged { icon-width: 20; }
 *[barrier=toll_booth] { icon-image: symbols/tollroad.svg; }
 *[barrier=ditch] { icon-image: symbols/pithole.svg; icon-width: 15; }
 *[barrier=ditch][indistinct?] { icon-image: symbols/depression.svg; icon-width: 15; }
+
+node|z-13:tagged { icon-image:none; }
