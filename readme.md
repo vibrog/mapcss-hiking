@@ -51,10 +51,10 @@ Open [JOSM][] **Preferences** and add the style sheet to your
 <http://www.vidargundersen.com/mapcss-hiking.zip>
 
 These style sheets are intended used on dark background (85% gray),
-equivalent to the `color.background=#222222` setting, and
-the area object opacity will override `mappaint.fillalpha`.
+and will override the `color.background` as well as the
+area object opacity (`mappaint.fillalpha`) settings.
 
-To use modules separately, add the raw view URL:
+To use the modules separately, add the raw view URL:
 
 <https://github.com/vibrog/mapcss-hiking/raw/master/roads.mapcss>
 
