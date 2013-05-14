@@ -1,0 +1,101 @@
+meta { title: "Hiking and biking routes"; }
+
+/*
+- blåmerket sti: relation[network][operator*="DNT"] > way[trailblazed]
+- turvei (kommunal): relation[route][operator*="kommune"]
+- veifar: relation[route=historic]
+- natursti/skogsti: relation[route=hiking] < node[board_type=nature]
+- kulturminnesti: relation[route=hiking] < node[board_type=history]
+*/
+
+relation[route=hiking] > way::trailblazed,
+relation[route=foot] > way::trailblazed,
+way[trailblazed?]::trailblazed,
+way[marked_trail]::trailblazed
+{
+  color:#D0006F;
+  width:7;
+  dashes:1,14;
+  linecap:round;
+  z-index:5;
+}
+
+way[trailblazed?]::trailblazed,
+way[marked_trail=blue]::trailblazed
+{
+  color:#0E3CCC;
+}
+way[trailblazed?][sac_scale]::trailblazed
+{
+  color:#d82d20;
+}
+
+relation[route=historic][historic!=piste] > way::route,
+way[highway][historic][historic!=piste]::route
+{
+  color:#630;
+  width:6;
+  opacity:0.5;
+  z-index:-2;
+}
+
+relation[route][operator*="kommune"]
+ > way[!trailblazed][!marked_trail]::trailblazed
+{ width:0; }
+relation[route][operator*="kommune"] > way::route
+{
+  color:#228b22;
+  width:6;
+  opacity:0.8;
+  z-index:-2;
+}
+
+/*
+- sykkelruter: route=bicycle, network=[inrl]cn
+- terrengsykkelritt: route=mtb, network=mtb
+*/
+
+relation[route=bicycle] > way::route,
+relation[network$="cn"] > way::route
+{
+  color:#8c0512;
+  width:6;
+  opacity:0.8;
+  z-index:-2;
+}
+
+relation[route=mtb] > way::route,
+relation[route][network=mtb] > way::route,
+way[mtb=designated]::route
+{
+  color:#678e2a;
+  width:6;
+  opacity:0.6;
+  z-index:-2;
+  text:auto;
+  text-offset:6;
+  text-color:#678e2a;
+  font-size:10;
+}
+
+/*
+- sykkelrestriksjoner: bicycle=no/dismount
+*/
+way[highway][bicycle=dismount],
+way[highway][bicycle=no],
+way[highway][bicycle=private],
+way[highway=footway][bicycle!=yes],
+way[highway][tunnel?][highway=trunk],
+way[highway][tunnel?][highway=primary],
+way[highway=~/trunk/][oneway?],
+way[highway=~/motorway/]
+{
+  color:salmon;
+}
+
+area[leisure][bicycle=no],
+area[boundary][bicycle=no]
+{
+  fill-color:#009c00;
+  fill-opacity:0.1;
+}

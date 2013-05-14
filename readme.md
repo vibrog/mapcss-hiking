@@ -5,34 +5,6 @@ A set of [MapCSS][] style sheets that implements conventions often
 seen in Norwegian hiking and nordic skiing maps.
 
 
-## Noteworthy map features
-
-The summer map is a hiking map and includes support for these tags:
-
-- `trail_visibility=*` -- indistinct trails are shown with open dashing
-- `tracktype=grade1-2` -- often used on "carriage trails" (no:trillestier)
-- `tracktype=grade3-5` -- tracks from tractors or logging machines
-- `trailblazed=yes` (and `marked_trail=blue` for compatibility)
-- `route=foot|hiking` relations
-
-The winter map tones down paths and instead shows skiing tracks:
-
-- `piste:type=nordic|downhill`
-- `piste:difficulty=*`
-- `piste:grooming=*`
-
-Additionally, hiking related POIs are shown from lower zoom levels.
-For example
-
-- trailhead parking lots (no:utfartsparkering); `amenity=parking, hiking=yes`
-- sports chapels; `amenity=place_of_worship, hiking=yes`,
-- serviced or unlocked cabins and emergency shelters,
-- lean-tos and
-- viewpoints.
-
-The style sheets are modular, making reuse and customization easier.
-
-
 ## Cartography and symbols
 
 The cartography in these maps are adopted from hiking maps published
@@ -40,20 +12,42 @@ by [Asker Skiklubb](http://asker-skiklubb.no/), which are essentially
 orienteering maps that have been cleaned up visually, and added POIs,
 place names and highlighting marked hiking trails and skiing tracks.
 
-Symbols are taken from the
+The hiking map includes visualization of the following tags:
+
+- `trail_visibility=bad|intermediate` -- indistinct trails are shown with open dashing
+- `tracktype=grade1-2` -- often used gravel tracks (no:turveier)
+- `tracktype=grade3-5` -- tracks from tractors or logging machines
+- `trailblazed=yes` (and `marked_trail=blue` for compatibility)
+- `route=hiking|bicycle|mtb` relations
+
+The winter features will add rendering of skiing tracks:
+
+- `piste:type=nordic|downhill`
+- `piste:difficulty=*`
+- `piste:grooming=*`
+
+Additionally, hiking related POIs are symbolized, including
+
+- serviced, provisioned or unlocked cabins and emergency shelters
+- lean-tos
+- viewpoints
+
+These symbols are taken from the
 [Symbol fonts for recreation and sport][3] standard created by
-the [Norwegian Mapping Authority](http://www.statkart.no/)
-that are now freely available and used with permission.
+the [Norwegian Mapping Authority](http://www.kartverket.no/).
 
 Buildings are drawn differently according to a scheme used in
 [Specification for cartography on displays][4] to keep commercial
 and residential buildings apart.
 
+The style sheets are modular, making reuse and customization easier.
+
 
 ## Installation and usage
 
-Open [JOSM][] **Preferences** and add the wanted modules to your
-**Map Paint Styles** list. To do this simply paste the URL to the raw view, e.g.
+Open [JOSM][] **Preferences** and add the wanted modules to
+your **Map Paint Styles** list. To do this simply paste the URL
+to the raw view, e.g.
 <https://github.com/vibrog/mapcss-hiking/raw/master/roads.mapcss>
 
 These style sheets are intended used with a dark canvas, e.g.
@@ -73,11 +67,12 @@ so loading style sheets in this order will give an intended result:
     @import("roads.mapcss");
     @import("buildings.mapcss");
     @import("trailvisibility.mapcss");
-    @import("hiking-routes.mapcss");
+    @import("routes.mapcss");
+    @import("hiking-signposts.mapcss");
+    @import("symbols.mapcss");
 
 For winter activities:
 
-    @import("landscape-winter.mapcss");
     @import("ski-nordic.mapcss");
     @import("ski-alpine.mapcss");
 
