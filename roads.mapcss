@@ -79,7 +79,7 @@ area[amenity=parking],
 area[landuse=depot],
 area[aeroway=apron],
 area[highway][area?],
-area[railway=platform],
+area[railway=platform]:closed,
 area[highway=turning_circle]
 {
   width:1;
@@ -122,4 +122,14 @@ way[bridge=suspension]
   casing-width:+4;
   casing-color:white;
   z-index:3;
+}
+
+/* Water transport */
+way[route=ferry],
+relation[route=ferry] > way
+{
+  color: #87D2E7;
+  opacity: 0.5;
+  width: 3;
+  dashes: 8,5;
 }
