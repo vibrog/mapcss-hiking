@@ -53,6 +53,7 @@ area[building][building:type=residential],
 area[building=garage],
 area[building=garages],
 area[building=shed],
+area[building=farm_auxiliary],
 area[building=farm],
 area[building=barn],
 area[military=barracks]
