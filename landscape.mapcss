@@ -23,6 +23,10 @@ area[landuse=orchard]
 {
   fill-color:#dfd;
 }
+area[natural=scree]
+{
+  fill-color:#8f5f24;
+}
 
 area[landuse=farm],
 area[landuse=farmland]
