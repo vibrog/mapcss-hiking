@@ -184,6 +184,9 @@ node:tagged { icon-width: 20; }
 *[historic=tomb][tomb=tumulus] { icon-image: symbols/relic.svg; }
 *[historic][protected] { icon-image: symbols/relic.svg; }
 *[historic=castle], *[historic=fort], *[site_type=fortification] { icon-image: symbols/fortified.svg; }
+*[historic$=kiln] { icon-image: symbols/kiln.svg; }
+*[historic=sawmill] { icon-image: symbols/sawmill.svg; }
+*[historic$=mill] { icon-image: symbols/mill.svg; }
 *[historic=monument], *[historic=memorial] { icon-image: symbols/attraction.svg; }
 *[historic=farm] { icon-image: symbols/ruralfarmyard.svg; }
 *[historic=mine],
