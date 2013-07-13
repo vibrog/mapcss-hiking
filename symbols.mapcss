@@ -133,7 +133,7 @@ node:tagged { icon-width: 20; }
 *[tourism=wilderness_hut][shop=provisions] { icon-image: symbols/hut-selfservice.svg; }
 *[tourism=alpine_hut] { icon-image: symbols/hut-staffed.svg; }
 *[rental=cabin] { icon-image: symbols/hut.svg; }
-*[tourism=picnic_area] { icon-image: symbols/picnicarea.svg; }
+*[tourism=picnic_site] { icon-image: symbols/picnicarea.svg; }
 *[leisure=picnic_table] { icon-image: symbols/picnicarea.svg; }
 *[tourism=hotel] { icon-image: symbols/hotel.svg; }
 *[tourism=motel] { icon-image: symbols/hotel.svg; }
