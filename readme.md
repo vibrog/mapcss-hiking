@@ -81,7 +81,7 @@ More: [Details on JOSM's MapCSS implementation][5].
 
 [MapCSS]: http://wiki.openstreetmap.org/wiki/MapCSS
 [JOSM]: http://josm.openstreetmap.de/
-[3]: http://www.statkart.no/filestore/Standardisering/docs/symbol.pdf
+[3]: http://www.kartverket.no/Documents/Standard/Bransjestandarder%20utover%20SOSI/symbol.pdf
   "Symbolfonter for friluftsliv og sport (1997). Statens kartverk Landkartdivisjonen, ISBN 82-90408-52-8"
 [4]: http://www.statkart.no/Skjermkartografi.d25-SwJjM0n.ips
   "Spesifikasjon for skjermkartografi"
