@@ -11,8 +11,10 @@ node:tagged { icon-width: 20; }
 *[building=church], *[building=cathedral] { icon-image: symbols/church.svg; }
 *[building=chapel] { icon-image: symbols/chapel.svg; }
 *[amenity=grave_yard], *[landuse=cemetery] { icon-image: symbols/cemetery.svg; }
+*[leisure=firepit] { icon-image: symbols/bonfire.svg; }
 *[amenity=bbq] { icon-image: symbols/bonfire.svg; }
 *[amenity=toilets] { icon-image: symbols/toilet.svg; }
+*[amenity=toilets][toilets:disposal=pitlatrine] { icon-image: symbols/toilet-outhouse.svg; }
 *[amenity=toilets][pitlatrine?] { icon-image: symbols/toilet-outhouse.svg; }
 *[amenity=toilets][diaper?] { }
 *[amenity=shower] { icon-image: symbols/shower.svg; }
