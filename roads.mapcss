@@ -97,14 +97,20 @@ way[railway=light_rail],
 way[railway=narrow_gauge],
 way[railway=preserved],
 way[railway=monorail],
-way[railway=funicular],
+way[railway=funicular]
+{
+  casing-width:+1;
+  casing-color:white;
+  width:2.5;
+  color:#222;
+  dashes:10,15;
+}
 way[railway=tram][!highway]
 {
   casing-width:+1;
-  casing-color:#DDD;
+  casing-color:white;
   width:2;
-  color:#444;
-  dashes:8,5;
+  color:#222;
 }
 
 way[tunnel?],
