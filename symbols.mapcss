@@ -172,6 +172,7 @@ node:tagged { icon-width: 20; }
 *[amenity=post_office] { icon-image: symbols/postalservices.svg; }
 *[amenity=police] { icon-image: symbols/police.svg; }
 *[amenity=fire_station] { icon-image: symbols/firestation.svg; }
+*[amenity=fire_hydrant], *[emergency=fire_extinguisher] { icon-image: symbols/fireextinguisher.svg; }
 *[amenity=cinema] { icon-image: symbols/cinema.svg; }
 *[amenity=theatre] { icon-image: symbols/theatre.svg; }
 *[amenity=arts_centre] { icon-image: symbols/artscentre.svg; }
@@ -182,15 +183,20 @@ node:tagged { icon-width: 20; }
 *[tourism=museum] { icon-image: symbols/museum.svg; }
 *[historic] { icon-image: symbols/culturalheritage.svg; }
 *[ruins?] { icon-image: symbols/culturalheritage.svg; }
-*[historic=archaeological_site] { icon-image: symbols/relic.svg; }
-*[historic=tomb][tomb=tumulus] { icon-image: symbols/relic.svg; }
 *[historic][protected] { icon-image: symbols/relic.svg; }
+*[historic=archaeological_site] { icon-image: symbols/relic.svg; }
+*[historic=archaeological_site][site_type=tumulus] { icon-image: symbols/tomb.svg; }
+*[historic=tomb][tomb=tumulus] { icon-image: symbols/tomb.svg; }
+*[historic=archaeological_site][site_type=petroglyph] { icon-image: symbols/rockcarving.svg; }
+*[historic=archaeological_site][site_type=megalith] { icon-image: symbols/stonecircle.svg; }
 *[historic=castle], *[historic=fort], *[site_type=fortification] { icon-image: symbols/fortified.svg; }
 *[historic$=kiln] { icon-image: symbols/kiln.svg; }
 *[historic=sawmill] { icon-image: symbols/sawmill.svg; }
 *[historic$=mill] { icon-image: symbols/mill.svg; }
 *[historic=monument], *[historic=memorial] { icon-image: symbols/attraction.svg; }
+*[historic=milestone] { icon-image: symbols/milestone.svg; }
 *[historic=farm] { icon-image: symbols/ruralfarmyard.svg; }
+*[historic=summer_mountain_farm] { icon-image: symbols/mountainfarm.svg; }
 *[historic=mine],
 *[historic=mineshaft],
 *[historic=adit],
@@ -233,10 +239,13 @@ node:tagged { icon-width: 20; }
 
 *[natural=tree] { icon-image: symbols/tree.svg; icon-width: 15; }
 *[natural=stone] { icon-image: symbols/stone.svg; icon-width: 15; }
+*[natural=peak], *[natural=hill] { icon-image: symbols/peak.svg; icon-width: 15; }
+
 *[man_made=cairn] { icon-image: symbols/cairn.svg; icon-width: 15; }
 *[man_made=survey_point] { icon-image: symbols/surveypoint.svg; icon-width: 15; }
 *[man_made=tower], *[man_made=mast], *[man_made=beacon] { icon-image: symbols/tower.svg; icon-width: 15; }
-*[natural=peak] { icon-image: symbols/peak.svg; icon-width: 15; }
+
+*[place][!historic][!natural] { icon-image: symbols/city.svg; icon-width: 12; text: auto; text-offset-y: 3; }
 
 *[barrier$=gate],
 *[barrier=chain],
