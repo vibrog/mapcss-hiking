@@ -1,11 +1,8 @@
 meta { title: "Trail visibility"; }
 
-way[trail_visibility=no] { dashes:4,2,4,6; opacity:0.4; }
-way[trail_visibility=horrible] { dashes:4,2,4,6; opacity:0.6; }
-way[trail_visibility=bad], way[indistinct?] { dashes:4,2,4,6; opacity:0.8; }
-way[trail_visibility=intermediate] { dashes:4,2,4,6; }
+way[trail_visibility=no] { dashes:10,2.5,10,10; opacity:0.4; }
+way[trail_visibility=horrible] { dashes:10,2.5,10,10; opacity:0.6; }
+way[trail_visibility=bad], way[indistinct?] { dashes:10,2.5,10,10; opacity:0.8; }
+way[trail_visibility=intermediate] { dashes:10,2.5,10,10; }
 way[trail_visibility=good] {}
-way[trail_visibility=excellent] { width:1.5; }
-
-way[tracktype=grade5] { dashes:15,5; }
-way[tracktype=grade4] { dashes:20,5; }
+way[trail_visibility=excellent] { width:1.4; }

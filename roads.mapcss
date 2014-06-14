@@ -55,9 +55,9 @@ way[highway=cycleway],
 way[highway=track],
 way[highway=bridleway]
 {
-  width:1.5;
+  width:1.8;
   color:white;
-  dashes:25,5;
+  dashes:20,2.5;
 }
 way[highway=footway],
 way[highway=pedestrian],
@@ -65,7 +65,7 @@ way[highway=path]
 {
   width:1;
   color:white;
-  dashes:8,4;
+  dashes:10,2.5;
 }
 way[highway=steps]
 {
