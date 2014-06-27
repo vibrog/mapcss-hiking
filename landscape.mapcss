@@ -43,6 +43,7 @@ area[natural=heath]
 area[landuse=recreation_ground],
 area[landuse=village_green],
 area[landuse=cemetery],
+area[amenity=grave_yard],
 area[leisure=park],
 area[leisure=common],
 area[leisure=garden],
