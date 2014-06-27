@@ -1,0 +1,125 @@
+meta { title: "Line features"; }
+
+/* ISSOM 522 Passable fence or railing */
+way[barrier=fence],
+way[barrier=avalanche_protection],
+way[fenced?]
+{
+  color: silver;
+  width: 2.1;
+  repeat-image: symbols/fence.svg;
+  repeat-image-offset: 3.25;
+  repeat-image-spacing: 37.5;
+}
+/* ISSOM 521.1 Impassable wall */
+way[barrier=wall]
+{
+  color: silver;
+  width: 3.5;
+}
+/* ISSOM 519 Passable stone wall */
+way[barrier=retaining_wall],
+way[barrier=city_wall],
+way[historic=citywalls],
+way[barrier=stone_wall],
+way[historic=stone_wall]
+{
+  color: silver;
+  width: 2.1;
+  casing-dashes: 0,37.5;
+  casing-width: +3;
+  casing-linecap: round;
+  casing-color: silver;
+}
+/* ISSOM 410 Vegetation */
+way[barrier=hedge],
+way[barrier=hedge_bank],
+way[natural=tree_row]
+{
+  color: #1EB53A;
+  width: 2.5;
+}
+
+/* ISSOM 307 Minor watercourse */
+way[barrier=ditch]
+{
+  color: #87D2E7;
+  width: 2.1;
+  dashes: 18.7,3.7;
+}
+
+/* ISSOM 201 Impassable cliff */
+way[natural=cliff]
+{
+  color: silver;
+  width: 5;
+  casing-dashes: 1.8,7.5;
+  casing-dashes-offset: 1.8;
+  casing-width: +7.5;
+  casing-offset: -3.75;
+  casing-color: silver;
+}
+/* ISSOM 203 Passable rock face */
+way[natural=cliff][foot=passable]
+{
+  width: 3;
+}
+/* ISSOM 106 Earth bank */
+way[man_made=embankment],
+way[embankment?]
+{
+  color: #8f5f24;
+  width: 2.7;
+  casing-dashes: 1.8,7.5;
+  casing-dashes-offset: 1.8;
+  casing-width: +7.5;
+  casing-offset: -3.75;
+  casing-color: #8f5f24;
+}
+
+/* ISSOM 509 Narrow ride */
+way[man_made=cutline][!highway][!power],
+way[cutline][!highway][!power]
+{
+  color: silver;
+  width: .7;
+  dashes: 30,5;
+}
+
+/* ISSOM 516 Power line, cableway or skilift */
+way[power$=line],
+way[aerialway]
+{
+  color: silver;
+  width: 1.4;
+  casing-dashes: 1.4,100;
+  casing-width: +6;
+  casing-color: silver;
+}
+
+/* ISSOM 533 Pipeline */
+way[man_made=pipeline]
+{
+  color: silver;
+  width: 2.1;
+  repeat-image: symbols/pipeline.svg;
+  repeat-image-spacing: 37.5;
+}
+
+way[waterway=dam],
+way[man_made=pier]
+{
+  color: white;
+  width: 4;
+  z-index: 2;
+}
+area[waterway=dam]:closed,
+area[man_made=pier]:closed
+{
+  width:1;
+  color:white;
+  dashes:0;
+  casing-width:0;
+  fill-color:white;
+  fill-opacity:0.4;
+}
