@@ -12,35 +12,41 @@ by [Asker Skiklubb](http://asker-skiklubb.no/), which are essentially
 orienteering maps that have been cleaned up visually, and added POIs,
 place names and highlighting marked hiking trails and skiing tracks.
 
-The hiking map includes visualization of the following tags:
+The style sheets are modular, making reuse and customization easier.
 
+The hiking map includes rendering of the following tags:
+
+- `trailblazed=yes` (and `marked_trail=blue` for compatibility) –– marked hiking routes
+- `route=hiking|bicycle|mtb` relations -- signposted hiking and biking routes
 - `trail_visibility=bad|intermediate` -- indistinct trails are shown with open dashing
-- `tracktype=grade1-2` -- often used gravel tracks (no:turveier)
+- `tracktype=grade1-2` -- often used on compact gravel tracks (no:turveier)
 - `tracktype=grade3-5` -- tracks from tractors or logging machines
-- `trailblazed=yes` (and `marked_trail=blue` for compatibility)
-- `route=hiking|bicycle|mtb` relations
+- `historic=path` and `route=historic` -- ancient trails
 
 The winter features will add rendering of skiing tracks:
 
 - `piste:type=nordic|downhill`
-- `piste:difficulty=*`
 - `piste:grooming=*`
+- `piste:difficulty=*`
 
-Additionally, hiking related POIs are symbolized, including
 
-- serviced, provisioned or unlocked cabins and emergency shelters
-- lean-tos
+## Point of interest icons
+
+Hiking related points are symbolized, including
+
+- serviced, provisioned or unlocked cabins and shelters
+- cultural heritage sites
 - viewpoints
 
 These symbols are taken from the
 [Symbol fonts for recreation and sport][3] standard created by
 the [Norwegian Mapping Authority](http://www.kartverket.no/).
+These and additional symbols are available in [SVG][] format
+from <http://www.vidargundersen.com/turkartsymboler/>
 
-Buildings are drawn differently according to a scheme used in
+Buildings are drawn according to a scheme used in
 [Specification for cartography on displays][4] to keep commercial
 and residential buildings apart.
-
-The style sheets are modular, making reuse and customization easier.
 
 
 ## Installation and usage
@@ -61,6 +67,7 @@ To use the modules separately, add the raw view URL:
 Loading the style sheets in this order will give an intended result:
 
     @import("landscape.mapcss");
+    @import("linefeatures.mapcss");
     @import("roads.mapcss");
     @import("trailvisibility.mapcss");
     @import("routes.mapcss");
@@ -74,7 +81,7 @@ For winter activities:
 
 Hide node handles to reduce clutter:
 
-    @import("hidenodes.mapcss");
+    @import("hidenodes.css");
 
 More: [Details on JOSM's MapCSS implementation][5].
 
@@ -83,6 +90,7 @@ More: [Details on JOSM's MapCSS implementation][5].
 [JOSM]: http://josm.openstreetmap.de/
 [3]: http://www.kartverket.no/Documents/Standard/Bransjestandarder%20utover%20SOSI/symbol.pdf
   "Symbolfonter for friluftsliv og sport (1997). Statens kartverk Landkartdivisjonen, ISBN 82-90408-52-8"
+[SVG]: http://www.w3.org/Graphics/SVG/
 [4]: http://www.kartverket.no/Documents/Kart/N50-N5000%20Kartdata/Spesifikasjon%20Skjermkartografi%2020091102.pdf
   "Spesifikasjon for skjermkartografi"
 [5]: http://josm.openstreetmap.de/wiki/Help/Styles/MapCSSImplementation
