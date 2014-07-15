@@ -31,7 +31,7 @@ way[piste:grooming*=skating]::ski
   color:#BB2F42;
 }
 
-way[piste:type=sled]::ski,
+way[piste:type=sled]::ski
 {
   color:#CDABDE;
 }
