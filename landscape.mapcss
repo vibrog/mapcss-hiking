@@ -156,3 +156,14 @@ way[boundary=administrative]
   width:3;
   dashes:9,3,2,3;
 }
+
+area[leisure=range],
+area[military=range],
+area[military=danger_area],
+area[sport=shooting],
+area[hazard]
+{
+  color:#fca1a2;
+  width:2;
+  fill-color:#fcd8db;
+}
