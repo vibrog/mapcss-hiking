@@ -123,15 +123,9 @@ node:tagged { icon-width: 20; }
 *[tourism=information][information=office] { icon-image: symbols/information-office.svg; }
 *[amenity=shelter] { icon-image: symbols/leanto.svg; }
 *[amenity=shelter][shelter_type=rock_shelter] { icon-image: symbols/cave.svg; }
-*[tourism=lean_to] { icon-image: symbols/leanto.svg; }
 *[amenity=shelter][shelter_type=lean_to] { icon-image: symbols/leanto.svg; }
-*[tourism=basic_hut] { icon-image: symbols/hut.svg; }
-*[tourism=cabin][access=public] { icon-image: symbols/hut.svg; }
-*[tourism=cabin][emergency?] { icon-image: symbols/hut.svg; }
 *[amenity=shelter][shelter_type=basic_hut] { icon-image: symbols/hut.svg; }
-*[tourism=cabin][service=no] { icon-image: symbols/hut-unprovisioned.svg; }
 *[tourism=wilderness_hut] { icon-image: symbols/hut-unprovisioned.svg; }
-*[tourism=cabin][service=self] { icon-image: symbols/hut-selfservice.svg; }
 *[tourism=wilderness_hut][shop=provisions] { icon-image: symbols/hut-selfservice.svg; }
 *[tourism=alpine_hut] { icon-image: symbols/hut-staffed.svg; }
 *[rental=cabin] { icon-image: symbols/hut.svg; }
