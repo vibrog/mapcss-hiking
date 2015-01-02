@@ -147,6 +147,7 @@ node:tagged { icon-width: 20; }
 *[tourism=camp_site] { icon-image: symbols/campsite.svg; }
 *[tourism=camp_site][backcountry?] { icon-image: symbols/lavvu.svg; }
 *[shelter_type=lavvu] { icon-image: symbols/lavvu.svg; }
+*[shelter_type=tent] { icon-image: symbols/lavvu.svg; }
 *[leisure=playground] { icon-image: symbols/playground.svg; }
 *[leisure=ski_playground] { icon-image: symbols/skiplayground.svg; }
 *[piste:type=playground] { icon-image: symbols/skiplayground.svg; }
@@ -239,6 +240,7 @@ node:tagged { icon-width: 20; }
 
 *[natural=tree] { icon-image: symbols/tree.svg; icon-width: 15; }
 *[natural=stone] { icon-image: symbols/stone.svg; icon-width: 15; }
+*[natural=termite_mound] { icon-image: symbols/knoll.svg; icon-width: 15; }
 *[natural=peak], *[natural=hill] { icon-image: symbols/peak.svg; icon-width: 15; }
 
 *[man_made=cairn] { icon-image: symbols/cairn.svg; icon-width: 15; }
