@@ -2,7 +2,7 @@ meta { title: "Hiking and biking routes"; }
 
 /*
 - blåmerket sti: relation[network][operator*="DNT"] > way[trailblazed]
-- turvei (kommunal): relation[route][operator*="kommune"]
+- turvei (skiltet, kommunal): relation[route][symbol=signposted][operator*="kommune"]
 - veifar: relation[route=historic]
 - natursti/skogsti: relation[route=hiking] < node[board_type=nature]
 - kulturminnesti: relation[route=hiking] < node[board_type=history]
@@ -19,15 +19,21 @@ way[marked_trail]::trailblazed
   linecap:round;
   z-index:5;
 }
-
 way[trailblazed?]::trailblazed,
 way[marked_trail=blue]::trailblazed
 {
   color:#0E3CCC;
 }
-way[trailblazed?][sac_scale]::trailblazed
+way[symbol=T_beacon]::trailblazed,
+way[marked_trail=T_beacon]::trailblazed
 {
   color:#d82d20;
+}
+relation[route][symbol=signposted]
+ > way[!trailblazed][!marked_trail]::trailblazed,
+way[symbol=signposted]::trailblazed
+{
+  color:#005862;
 }
 
 relation[route=historic][historic!=piste] > way::route,
@@ -36,17 +42,6 @@ way[highway][historic][historic!=piste]::route
   color:#630;
   width:6;
   opacity:0.5;
-  z-index:-2;
-}
-
-relation[route][operator*="kommune"]
- > way[!trailblazed][!marked_trail]::trailblazed
-{ width:0; }
-relation[route][operator*="kommune"] > way::route
-{
-  color:#228b22;
-  width:6;
-  opacity:0.8;
   z-index:-2;
 }
 
