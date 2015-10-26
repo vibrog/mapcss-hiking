@@ -65,6 +65,13 @@ way[piste:type=sled][piste:lit?]::nightski
   color:#CDABDE;
 }
 
+way!:closed[piste:type*=ski_jump]::ski
+{
+  width:1.5;
+  color:black;
+  z-index:6;
+}
+
 way[snowplowing=no][highway][!piste:type][!piste:grooming]
 {
   dashes:8,1;
