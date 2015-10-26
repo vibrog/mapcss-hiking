@@ -148,6 +148,7 @@ node:tagged { icon-width: 20; }
 *[piste:type=playground] { icon-image: symbols/skiplayground.svg; }
 *[natural=beach] { icon-image: symbols/bath.svg; }
 *[natural=beach][nudism?] { icon-image: symbols/bath-nude.svg; }
+*[man_made=ski_jump] { icon-image: symbols/skijump.svg; }
 *[sport=ski_jump_take_off] { icon-image: symbols/skijump.svg; }
 *[sport=biathlon] { icon-image: symbols/biathlon.svg; }
 *[amenity=drinking_water] { icon-image: symbols/drinkingwater.svg; }
