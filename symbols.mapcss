@@ -1,6 +1,7 @@
 meta { title: "Symbols"; }
 node:tagged { icon-width: 20; }
 
+*[tourism=attraction] { icon-image: symbols/attraction.svg; }
 *[tourism=viewpoint] { icon-image: symbols/viewpoint.svg; }
 *[tourism=viewpoint][man_made=tower] { icon-image: symbols/observationtower.svg; }
 *[man_made=tower][tower:type=observation] { icon-image: symbols/observationtower.svg; }
@@ -172,7 +173,7 @@ node:tagged { icon-width: 20; }
 *[amenity=theatre] { icon-image: symbols/theatre.svg; }
 *[amenity=arts_centre] { icon-image: symbols/artscentre.svg; }
 *[amenity=community_centre] { icon-image: symbols/artscentre.svg; }
-*[tourism=attraction] { icon-image: symbols/attraction.svg; }
+*[tourism=gallery] { icon-image: symbols/artwork.svg; }
 *[tourism=artwork] { icon-image: symbols/artwork.svg; }
 *[amenity=fountain] { icon-image: symbols/artwork.svg; }
 *[tourism=museum] { icon-image: symbols/museum.svg; }
@@ -241,7 +242,7 @@ node:tagged { icon-width: 20; }
 *[man_made=survey_point] { icon-image: symbols/surveypoint.svg; icon-width: 15; }
 *[man_made=tower], *[man_made=mast], *[man_made=beacon] { icon-image: symbols/tower.svg; icon-width: 15; }
 
-*[place][!historic][!natural] { icon-image: symbols/city.svg; icon-width: 12; text: auto; text-offset-y: 3; }
+*[place][!historic][!natural][!tourism][!amenity] { icon-image: symbols/city.svg; icon-width: 12; text: auto; text-offset-y: 3; }
 
 *[barrier$=gate],
 *[barrier=chain],
