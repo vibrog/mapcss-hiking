@@ -22,12 +22,13 @@ node:tagged { icon-width: 20; }
 *[amenity=restaurant] { icon-image: symbols/restaurant.svg; }
 *[amenity=fast_food] { icon-image: symbols/fastfood.svg; }
 *[amenity=bar], *[amenity=pub], *[amenity=biergarten] { icon-image: symbols/bar.svg; }
-*[highway=bus_stop] { icon-image: symbols/bus.svg; }
-*[amenity=bus_station] { icon-image: symbols/bus.svg; }
-*[railway=station] { icon-image: symbols/railway.svg; }
-*[railway=halt] { icon-image: symbols/railway.svg; }
-*[railway=tram_stop] { icon-image: symbols/tram.svg; }
-*[amenity=ferry_terminal] { icon-image: symbols/ferry.svg; }
+*[public_transport=stop_position][train=yes], *[railway=station], *[railway=halt] { icon-image: symbols/railway.svg; }
+*[public_transport=stop_position][subway=yes], *[railway=subway_entrance] { icon-image: symbols/railway.svg; }
+*[public_transport=stop_position][tram=yes], *[railway=tram_stop] { icon-image: symbols/tram.svg; }
+*[public_transport=stop_position][bus=yes], *[highway=bus_stop], *[amenity=bus_station] { icon-image: symbols/bus.svg; }
+*[public_transport=stop_position][trolleybus=yes] { icon-image: symbols/bus.svg; }
+*[public_transport=stop_position][aerialway=yes] { icon-image: symbols/gondola.svg; }
+*[public_transport=stop_position][ferry=yes], *[amenity=ferry_terminal] { icon-image: symbols/ferry.svg; }
 *[leisure=marina] { icon-image: symbols/marina.svg; }
 *[leisure=slipway] { icon-image: symbols/slipway.svg; }
 *[seamark=anchorage] { icon-image: symbols/anchorage.svg; }
