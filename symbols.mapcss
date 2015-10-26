@@ -194,7 +194,7 @@ node:tagged { icon-width: 20; }
 *[historic=monument], *[historic=memorial] { icon-image: symbols/attraction.svg; }
 *[historic=milestone], *[highway=milestone][historic] { icon-image: symbols/milestone.svg; }
 *[historic=farm] { icon-image: symbols/ruralfarmyard.svg; }
-*[historic=summer_mountain_farm] { icon-image: symbols/mountainfarm.svg; }
+*[historic=shieling], *[place=shieling], *[historic=summer_mountain_farm] { icon-image: symbols/mountainfarm.svg; }
 *[historic=mine],
 *[historic=mineshaft],
 *[historic=adit],
