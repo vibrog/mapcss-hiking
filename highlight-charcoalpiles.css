@@ -1,0 +1,12 @@
+meta { title:"Charcoal piles"; }
+node[historic=charcoal_pile]
+{
+  symbol-shape:circle;
+  symbol-size:10;
+  symbol-fill-color:white;
+  symbol-fill-opacity:0.65;
+  text:auto;
+}
+node[diameter] { symbol-size: eval(tag(diameter)/1000); }
+node[source^=survey], node[source^=contributed] { symbol-fill-color:darkgreen; }
+node[fixme] { symbol-fill-color:darkred; }
